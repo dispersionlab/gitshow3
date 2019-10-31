@@ -27,7 +27,7 @@ Gitshow runs sessions twice per month, and each session lasts ~2 weeks. You are 
 
 6. Edit a new version of the score. For the score, consider that a markdown file can embed images, tables etc. See [this guide](https://www.markdownguide.org/)
 
-7. Record your patch and save it as recording.wav. This recording could be entirely generative output, or an improvisation, or a performance of your score. 
+7. Record your patch and save it as recording#.wav. This recording could be entirely generative output, or an improvisation, or a performance of your score. 
 
 8. IMPORTANT: please *do not* rename the files in the repo (keep score#.md, module#.js, patch#.vcv, recording#.wav). If a save dialog asks if you want to overwite a file, click yes. With this in mind, its a good habit to commit changes to repo frequently.  
 
@@ -62,3 +62,4 @@ Shortly after this date, I'll reassign the repositories for the next session.
 ## git commands
 coming soon.
 
+	

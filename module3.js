@@ -6,8 +6,12 @@ config.bufferSize = 16
 
 var phase = 0
 
+function step(step){
+	display('output: ' + step)
+}
+
 function process(block) {
-	
+
 	// Knob ranges from -5 to 5 octaves
 	// var probability = block.knobs[0] * 10 - 5
 
@@ -22,11 +26,14 @@ function process(block) {
 		// Set all samples in output buffer
 	for (var i = 0; i < block.bufferSize; i++) {
 		
+		// IN1: signal input value ranges 0-10, and is thus tested against the switch case below
 		let switcher = Math.floor(block.inputs[0][i])
 
-		display(switcher)
+		
 		switch (switcher){
+			// output 0
 			case 0:
+					step(0)
 					block.outputs[0][i] = 10
 					block.outputs[1][i] = 0
 					block.outputs[2][i] = 0
@@ -36,6 +43,7 @@ function process(block) {
 			break;
 			case 1:
 			case 2:
+					step(1)
 					block.outputs[0][i] = 0
 					block.outputs[1][i] = 10
 					block.outputs[2][i] = 0
@@ -45,6 +53,7 @@ function process(block) {
 			break;
 			case 3:
 			case 4:
+					step(2)
 					block.outputs[0][i] = 0
 					block.outputs[1][i] = 0
 					block.outputs[2][i] = 10
@@ -54,6 +63,7 @@ function process(block) {
 			break;
 			case 5:
 			case 6:
+					step(3)
 					block.outputs[0][i] = 0
 					block.outputs[1][i] = 0
 					block.outputs[2][i] = 0
@@ -63,6 +73,7 @@ function process(block) {
 			break;
 			case 7:
 			case 8:
+					step(4)
 					block.outputs[0][i] = 0
 					block.outputs[1][i] = 0
 					block.outputs[2][i] = 0
@@ -71,6 +82,7 @@ function process(block) {
 					block.outputs[5][i] = 0
 			break;
 			case 9:
+					step(5)
 					block.outputs[0][i] = 0
 					block.outputs[1][i] = 0
 					block.outputs[2][i] = 0

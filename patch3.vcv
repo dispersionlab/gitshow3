@@ -20,7 +20,7 @@
         }
       },
       "pos": [
-        74,
+        80,
         0
       ]
     },
@@ -53,7 +53,7 @@
       ],
       "rightModuleId": 35,
       "pos": [
-        54,
+        60,
         0
       ]
     },
@@ -64,9 +64,10 @@
       "model": "Notes",
       "params": [],
       "leftModuleId": 1,
+      "rightModuleId": 40,
       "text": "patch instructions:\n\n1. Choose an audio driver and device in the AUDIO-8 module.\n\n2. Drag knobs up/down. Hold Ctrl (Cmd on Mac) while dragging to fine-tune. Right-click knobs to edit, or double-click to initialize.\n\n3. Drag ports to create and move 3ables. Stack multiple cables on outputs by holding Ctrl (Cmd on Mac) and dragging from an output.\n\n4. Right-click on an empty rack space to add new modules.",
       "pos": [
-        84,
+        90,
         0
       ]
     },
@@ -78,7 +79,7 @@
       "params": [
         {
           "id": 0,
-          "value": 0.693000019
+          "value": 0.0
         },
         {
           "id": 1,
@@ -125,43 +126,14 @@
           "value": 0.0
         }
       ],
-      "leftModuleId": 28,
+      "leftModuleId": 39,
       "data": {
         "path": "/Users/mp/_gitshows/gitShow3/module3.js",
-        "script": "// bernoulli gate based on mutable branches\n\n\nconfig.frameDivider = 1\nconfig.bufferSize = 16\n\nvar phase = 0\n\nfunction process(block) {\n\t\n\t// Knob ranges from -5 to 5 octaves\n\t// var probability = block.knobs[0] * 10 - 5\n\n\t// knob1 (k1) sets the probability of which output will be chosen\n\t//var probability = block.knobs[0]\n\n\t// switcher is a true/false value\n\t//var switcher = Math.random() < probability\n\n\n\t\n\t\t// Set all samples in output buffer\n\tfor (var i = 0; i < block.bufferSize; i++) {\n\t\t\n\t\tlet switcher = Math.floor(block.inputs[0][i])\n\n\t\tdisplay(switcher)\n\t\tswitch (switcher){\n\t\t\tcase 0:\n\t\t\t\t\tblock.outputs[0][i] = 10\n\t\t\t\t\tblock.outputs[1][i] = 0\n\t\t\t\t\tblock.outputs[2][i] = 0\n\t\t\t\t\tblock.outputs[3][i] = 0\n\t\t\t\t\tblock.outputs[4][i] = 0\n\t\t\t\t\tblock.outputs[5][i] = 0\n\t\t\tbreak;\n\t\t\tcase 1:\n\t\t\tcase 2:\n\t\t\t\t\tblock.outputs[0][i] = 0\n\t\t\t\t\tblock.outputs[1][i] = 10\n\t\t\t\t\tblock.outputs[2][i] = 0\n\t\t\t\t\tblock.outputs[3][i] = 0\n\t\t\t\t\tblock.outputs[4][i] = 0\n\t\t\t\t\tblock.outputs[5][i] = 0\n\t\t\tbreak;\n\t\t\tcase 3:\n\t\t\tcase 4:\n\t\t\t\t\tblock.outputs[0][i] = 0\n\t\t\t\t\tblock.outputs[1][i] = 0\n\t\t\t\t\tblock.outputs[2][i] = 10\n\t\t\t\t\tblock.outputs[3][i] = 0\n\t\t\t\t\tblock.outputs[4][i] = 0\n\t\t\t\t\tblock.outputs[5][i] = 0\n\t\t\tbreak;\n\t\t\tcase 5:\n\t\t\tcase 6:\n\t\t\t\t\tblock.outputs[0][i] = 0\n\t\t\t\t\tblock.outputs[1][i] = 0\n\t\t\t\t\tblock.outputs[2][i] = 0\n\t\t\t\t\tblock.outputs[3][i] = 10\n\t\t\t\t\tblock.outputs[4][i] = 0\n\t\t\t\t\tblock.outputs[5][i] = 0\n\t\t\tbreak;\n\t\t\tcase 7:\n\t\t\tcase 8:\n\t\t\t\t\tblock.outputs[0][i] = 0\n\t\t\t\t\tblock.outputs[1][i] = 0\n\t\t\t\t\tblock.outputs[2][i] = 0\n\t\t\t\t\tblock.outputs[3][i] = 0\n\t\t\t\t\tblock.outputs[4][i] = 10\n\t\t\t\t\tblock.outputs[5][i] = 0\n\t\t\tbreak;\n\t\t\tcase 9:\n\t\t\t\t\tblock.outputs[0][i] = 0\n\t\t\t\t\tblock.outputs[1][i] = 0\n\t\t\t\t\tblock.outputs[2][i] = 0\n\t\t\t\t\tblock.outputs[3][i] = 0\n\t\t\t\t\tblock.outputs[4][i] = 0\n\t\t\t\t\tblock.outputs[5][i] = 10\n\t\t\tbreak;\t\t\t\t\n\n\n\t\t}\n\n\t\t// }\n\t\t// if (block.inputs[0][i] > 5){\n\t\t// \t// if the switcher case is false, pass input 0 to output 0\n\t\t// \tif (switcher === false) {\n\t\t// \t\tblock.outputs[0][i] = 10\n\t\t// \t\tblock.outputs[1][i] = 0\n\t\t\t\t\n\t\t// \t} // if the switcher case is true, pass input 0 to output 1\n\t\t// \t\telse {\n\t\t// \t\tblock.outputs[1][i] = 10\n\t\t// \t\tblock.outputs[0][i] = 0\n\t\t// \t}\t\n\t\t// }\n\n\t} \n\t\n\n}\n"
+        "script": "// bernoulli gate based on mutable branches\n\n\nconfig.frameDivider = 1\nconfig.bufferSize = 16\n\nvar phase = 0\n\nfunction step(step){\n\tdisplay('output: ' + step)\n}\n\nfunction process(block) {\n\n\t// Knob ranges from -5 to 5 octaves\n\t// var probability = block.knobs[0] * 10 - 5\n\n\t// knob1 (k1) sets the probability of which output will be chosen\n\t//var probability = block.knobs[0]\n\n\t// switcher is a true/false value\n\t//var switcher = Math.random() < probability\n\n\n\t\n\t\t// Set all samples in output buffer\n\tfor (var i = 0; i < block.bufferSize; i++) {\n\t\t\n\t\t// IN1: signal input value ranges 0-10, and is thus tested against the switch case below\n\t\tlet switcher = Math.floor(block.inputs[0][i])\n\n\t\t\n\t\tswitch (switcher){\n\t\t\t// output 0\n\t\t\tcase 0:\n\t\t\t\t\tstep(0)\n\t\t\t\t\tblock.outputs[0][i] = 10\n\t\t\t\t\tblock.outputs[1][i] = 0\n\t\t\t\t\tblock.outputs[2][i] = 0\n\t\t\t\t\tblock.outputs[3][i] = 0\n\t\t\t\t\tblock.outputs[4][i] = 0\n\t\t\t\t\tblock.outputs[5][i] = 0\n\t\t\tbreak;\n\t\t\tcase 1:\n\t\t\tcase 2:\n\t\t\t\t\tstep(1)\n\t\t\t\t\tblock.outputs[0][i] = 0\n\t\t\t\t\tblock.outputs[1][i] = 10\n\t\t\t\t\tblock.outputs[2][i] = 0\n\t\t\t\t\tblock.outputs[3][i] = 0\n\t\t\t\t\tblock.outputs[4][i] = 0\n\t\t\t\t\tblock.outputs[5][i] = 0\n\t\t\tbreak;\n\t\t\tcase 3:\n\t\t\tcase 4:\n\t\t\t\t\tstep(2)\n\t\t\t\t\tblock.outputs[0][i] = 0\n\t\t\t\t\tblock.outputs[1][i] = 0\n\t\t\t\t\tblock.outputs[2][i] = 10\n\t\t\t\t\tblock.outputs[3][i] = 0\n\t\t\t\t\tblock.outputs[4][i] = 0\n\t\t\t\t\tblock.outputs[5][i] = 0\n\t\t\tbreak;\n\t\t\tcase 5:\n\t\t\tcase 6:\n\t\t\t\t\tstep(3)\n\t\t\t\t\tblock.outputs[0][i] = 0\n\t\t\t\t\tblock.outputs[1][i] = 0\n\t\t\t\t\tblock.outputs[2][i] = 0\n\t\t\t\t\tblock.outputs[3][i] = 10\n\t\t\t\t\tblock.outputs[4][i] = 0\n\t\t\t\t\tblock.outputs[5][i] = 0\n\t\t\tbreak;\n\t\t\tcase 7:\n\t\t\tcase 8:\n\t\t\t\t\tstep(4)\n\t\t\t\t\tblock.outputs[0][i] = 0\n\t\t\t\t\tblock.outputs[1][i] = 0\n\t\t\t\t\tblock.outputs[2][i] = 0\n\t\t\t\t\tblock.outputs[3][i] = 0\n\t\t\t\t\tblock.outputs[4][i] = 10\n\t\t\t\t\tblock.outputs[5][i] = 0\n\t\t\tbreak;\n\t\t\tcase 9:\n\t\t\t\t\tstep(5)\n\t\t\t\t\tblock.outputs[0][i] = 0\n\t\t\t\t\tblock.outputs[1][i] = 0\n\t\t\t\t\tblock.outputs[2][i] = 0\n\t\t\t\t\tblock.outputs[3][i] = 0\n\t\t\t\t\tblock.outputs[4][i] = 0\n\t\t\t\t\tblock.outputs[5][i] = 10\n\t\t\tbreak;\t\t\t\t\n\n\n\t\t}\n\n\t\t// }\n\t\t// if (block.inputs[0][i] > 5){\n\t\t// \t// if the switcher case is false, pass input 0 to output 0\n\t\t// \tif (switcher === false) {\n\t\t// \t\tblock.outputs[0][i] = 10\n\t\t// \t\tblock.outputs[1][i] = 0\n\t\t\t\t\n\t\t// \t} // if the switcher case is true, pass input 0 to output 1\n\t\t// \t\telse {\n\t\t// \t\tblock.outputs[1][i] = 10\n\t\t// \t\tblock.outputs[0][i] = 0\n\t\t// \t}\t\n\t\t// }\n\n\t} \n\t\n\n}\n"
       },
       "pos": [
-        10,
+        16,
         0
-      ]
-    },
-    {
-      "id": 22,
-      "plugin": "VCV-Recorder",
-      "version": "1.0.1",
-      "model": "Recorder",
-      "params": [
-        {
-          "id": 0,
-          "value": 1.0
-        },
-        {
-          "id": 1,
-          "value": 0.0
-        }
-      ],
-      "leftModuleId": 23,
-      "data": {
-        "format": "wav",
-        "path": "/Users/mp/gitShow1/test.wav",
-        "incrementPath": true,
-        "sampleRate": 44100,
-        "depth": 16,
-        "bitRate": 320000
-      },
-      "pos": [
-        92,
-        1
       ]
     },
     {
@@ -170,10 +142,9 @@
       "version": "1.1.5",
       "model": "Notes",
       "params": [],
-      "rightModuleId": 22,
       "text": "recording! this little module simplifies things so we don't have to use jack+daw\n\nremember to save the recording to the git repo, but don't let it be larger than 20MB~",
       "pos": [
-        76,
+        82,
         1
       ]
     },
@@ -185,7 +156,7 @@
       "params": [
         {
           "id": 0,
-          "value": 1.0
+          "value": 0.0
         },
         {
           "id": 1,
@@ -193,7 +164,7 @@
         },
         {
           "id": 2,
-          "value": -0.10700544
+          "value": -4.67000628
         },
         {
           "id": 3,
@@ -212,7 +183,7 @@
           "value": 0.0
         }
       ],
-      "rightModuleId": 17,
+      "rightModuleId": 39,
       "pos": [
         0,
         0
@@ -248,7 +219,7 @@
       "leftModuleId": 2,
       "rightModuleId": 1,
       "pos": [
-        64,
+        70,
         0
       ]
     },
@@ -284,7 +255,7 @@
         },
         {
           "id": 6,
-          "value": 0.5
+          "value": 0.350000054
         },
         {
           "id": 7,
@@ -304,7 +275,7 @@
         },
         {
           "id": 11,
-          "value": 0.0
+          "value": 0.463000029
         }
       ],
       "rightModuleId": 37,
@@ -314,7 +285,7 @@
         "easterEgg": false
       },
       "pos": [
-        24,
+        30,
         1
       ]
     },
@@ -380,7 +351,7 @@
         "easterEgg": false
       },
       "pos": [
-        38,
+        44,
         1
       ]
     },
@@ -396,7 +367,7 @@
         },
         {
           "id": 1,
-          "value": 0.0
+          "value": 1.0
         },
         {
           "id": 2,
@@ -404,7 +375,7 @@
         },
         {
           "id": 3,
-          "value": 0.0
+          "value": 0.714000404
         },
         {
           "id": 4,
@@ -428,7 +399,7 @@
         },
         {
           "id": 9,
-          "value": 0.0
+          "value": 0.372000009
         },
         {
           "id": 10,
@@ -440,11 +411,74 @@
         },
         {
           "id": 12,
-          "value": 0.5
+          "value": 0.716500223
         }
       ],
       "pos": [
-        26,
+        32,
+        0
+      ]
+    },
+    {
+      "id": 39,
+      "plugin": "Fundamental",
+      "version": "1.2.1",
+      "model": "LFO2",
+      "params": [
+        {
+          "id": 0,
+          "value": 1.0
+        },
+        {
+          "id": 1,
+          "value": 1.0
+        },
+        {
+          "id": 2,
+          "value": -0.24199976
+        },
+        {
+          "id": 3,
+          "value": 1.5
+        },
+        {
+          "id": 4,
+          "value": 0.5
+        }
+      ],
+      "leftModuleId": 28,
+      "rightModuleId": 17,
+      "pos": [
+        10,
+        0
+      ]
+    },
+    {
+      "id": 40,
+      "plugin": "VCV-Recorder",
+      "version": "1.0.1",
+      "model": "Recorder",
+      "params": [
+        {
+          "id": 0,
+          "value": 1.0
+        },
+        {
+          "id": 1,
+          "value": 0.0
+        }
+      ],
+      "leftModuleId": 8,
+      "data": {
+        "format": "wav",
+        "path": "/Users/mp/_gitshows/gitShow3/recording3.wav",
+        "incrementPath": true,
+        "sampleRate": 44100,
+        "depth": 16,
+        "bitRate": 320000
+      },
+      "pos": [
+        106,
         0
       ]
     }
@@ -457,14 +491,6 @@
       "inputModuleId": 1,
       "inputId": 0,
       "color": "#0986ad"
-    },
-    {
-      "id": 340,
-      "outputModuleId": 28,
-      "outputId": 1,
-      "inputModuleId": 17,
-      "inputId": 0,
-      "color": "#c9b70e"
     },
     {
       "id": 367,
@@ -561,6 +587,46 @@
       "inputModuleId": 37,
       "inputId": 3,
       "color": "#c91847"
+    },
+    {
+      "id": 390,
+      "outputModuleId": 38,
+      "outputId": 8,
+      "inputModuleId": 36,
+      "inputId": 4,
+      "color": "#0986ad"
+    },
+    {
+      "id": 340,
+      "outputModuleId": 39,
+      "outputId": 0,
+      "inputModuleId": 17,
+      "inputId": 0,
+      "color": "#c9b70e"
+    },
+    {
+      "id": 392,
+      "outputModuleId": 2,
+      "outputId": 0,
+      "inputModuleId": 40,
+      "inputId": 2,
+      "color": "#0c8e15"
+    },
+    {
+      "id": 394,
+      "outputModuleId": 35,
+      "outputId": 0,
+      "inputModuleId": 40,
+      "inputId": 3,
+      "color": "#0986ad"
+    },
+    {
+      "id": 396,
+      "outputModuleId": 28,
+      "outputId": 2,
+      "inputModuleId": 39,
+      "inputId": 0,
+      "color": "#0c8e15"
     }
   ]
 }
