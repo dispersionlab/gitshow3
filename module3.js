@@ -1,4 +1,7 @@
-// bernoulli gate based on mutable branches
+// module3.js is a gate sequencer, which takes as its only input a signal. It compares the input 	signal amplitude against 6 logical conditions, and sends a gate out of one of the 6 outputs. 
+
+// Inputs: IN1
+// Outputs: OUT1, OUT2, OUT3, OUT4, OUT5, OUT6
 
 
 config.frameDivider = 1
@@ -10,26 +13,11 @@ function step(step){
 	display('output: ' + step)
 }
 
-function process(block) {
-
-	// Knob ranges from -5 to 5 octaves
-	// var probability = block.knobs[0] * 10 - 5
-
-	// knob1 (k1) sets the probability of which output will be chosen
-	//var probability = block.knobs[0]
-
-	// switcher is a true/false value
-	//var switcher = Math.random() < probability
-
-
-	
-		// Set all samples in output buffer
+function process(block) {	
+	// Set all samples in output buffer
 	for (var i = 0; i < block.bufferSize; i++) {
-		
 		// IN1: signal input value ranges 0-10, and is thus tested against the switch case below
 		let switcher = Math.floor(block.inputs[0][i])
-
-		
 		switch (switcher){
 			// output 0
 			case 0:
@@ -41,6 +29,7 @@ function process(block) {
 					block.outputs[4][i] = 0
 					block.outputs[5][i] = 0
 			break;
+			// output 1
 			case 1:
 			case 2:
 					step(1)
@@ -51,6 +40,8 @@ function process(block) {
 					block.outputs[4][i] = 0
 					block.outputs[5][i] = 0
 			break;
+
+			// output 2
 			case 3:
 			case 4:
 					step(2)
@@ -61,16 +52,18 @@ function process(block) {
 					block.outputs[4][i] = 0
 					block.outputs[5][i] = 0
 			break;
+			// output 3			
 			case 5:
 			case 6:
-					step(3)
-					block.outputs[0][i] = 0
-					block.outputs[1][i] = 0
-					block.outputs[2][i] = 0
-					block.outputs[3][i] = 10
-					block.outputs[4][i] = 0
-					block.outputs[5][i] = 0
+				step(3)
+				block.outputs[0][i] = 0
+				block.outputs[1][i] = 0
+				block.outputs[2][i] = 0
+				block.outputs[3][i] = 10
+				block.outputs[4][i] = 0
+				block.outputs[5][i] = 0
 			break;
+			// output 4
 			case 7:
 			case 8:
 					step(4)
@@ -81,6 +74,7 @@ function process(block) {
 					block.outputs[4][i] = 10
 					block.outputs[5][i] = 0
 			break;
+			// output 5
 			case 9:
 					step(5)
 					block.outputs[0][i] = 0
@@ -90,24 +84,7 @@ function process(block) {
 					block.outputs[4][i] = 0
 					block.outputs[5][i] = 10
 			break;				
-
-
 		}
-
-		// }
-		// if (block.inputs[0][i] > 5){
-		// 	// if the switcher case is false, pass input 0 to output 0
-		// 	if (switcher === false) {
-		// 		block.outputs[0][i] = 10
-		// 		block.outputs[1][i] = 0
-				
-		// 	} // if the switcher case is true, pass input 0 to output 1
-		// 		else {
-		// 		block.outputs[1][i] = 10
-		// 		block.outputs[0][i] = 0
-		// 	}	
-		// }
-
 	} 
 	
 
