@@ -31,8 +31,10 @@ function process(block) {
 
 		if (switcher === false) {
 			block.outputs[0][i] = block.inputs[0][i]
+			block.outputs[1][i] = 0
 		} else {
 			block.outputs[1][i] = block.inputs[0][i]
+			block.outputs[0][i] = 0
 		}	
 	} 
 }
