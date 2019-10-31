@@ -9,4 +9,7 @@ In the recording and provided patch, LFO-2's output signal is controlling the pr
 
 ## Score:
 
-Play the synth by flipping the range switches on the rampage module
+Play the synth by only using the following paramters:
+
+- flipping the range switches on the rampage module
+- flipping the UNI/BI switches on LFO-1 and LFO-2
