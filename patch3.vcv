@@ -1,10 +1,10 @@
 {
-  "version": "1.1.5",
+  "version": "1.1.6",
   "modules": [
     {
       "id": 1,
       "plugin": "Core",
-      "version": "1.1.5",
+      "version": "1.1.6",
       "model": "AudioInterface",
       "params": [],
       "leftModuleId": 35,
@@ -12,7 +12,7 @@
       "data": {
         "audio": {
           "driver": 5,
-          "deviceName": "Apple Inc.: MacBook Pro Speakers",
+          "deviceName": "Apple Inc.: External Headphones",
           "offset": 0,
           "maxChannels": 8,
           "sampleRate": 44100,
@@ -32,7 +32,7 @@
       "params": [
         {
           "id": 0,
-          "value": 0.0
+          "value": 0.585000038
         },
         {
           "id": 1,
@@ -61,7 +61,7 @@
     {
       "id": 8,
       "plugin": "Core",
-      "version": "1.1.5",
+      "version": "1.1.6",
       "model": "Notes",
       "params": [],
       "leftModuleId": 1,
@@ -74,12 +74,12 @@
     {
       "id": 17,
       "plugin": "VCV-Prototype",
-      "version": "1.1.1",
+      "version": "1.2.0",
       "model": "Prototype",
       "params": [
         {
           "id": 0,
-          "value": 0.0
+          "value": 0.53700006
         },
         {
           "id": 1,
@@ -128,8 +128,8 @@
       ],
       "leftModuleId": 39,
       "data": {
-        "path": "/Users/mp/_gitshows/gitShow3/module3.js",
-        "script": "// bernoulli gate based on mutable branches\n\n\nconfig.frameDivider = 1\nconfig.bufferSize = 16\n\nvar phase = 0\n\nfunction step(step){\n\tdisplay('output: ' + step)\n}\n\nfunction process(block) {\n\n\t// Knob ranges from -5 to 5 octaves\n\t// var probability = block.knobs[0] * 10 - 5\n\n\t// knob1 (k1) sets the probability of which output will be chosen\n\t//var probability = block.knobs[0]\n\n\t// switcher is a true/false value\n\t//var switcher = Math.random() < probability\n\n\n\t\n\t\t// Set all samples in output buffer\n\tfor (var i = 0; i < block.bufferSize; i++) {\n\t\t\n\t\t// IN1: signal input value ranges 0-10, and is thus tested against the switch case below\n\t\tlet switcher = Math.floor(block.inputs[0][i])\n\n\t\t\n\t\tswitch (switcher){\n\t\t\t// output 0\n\t\t\tcase 0:\n\t\t\t\t\tstep(0)\n\t\t\t\t\tblock.outputs[0][i] = 10\n\t\t\t\t\tblock.outputs[1][i] = 0\n\t\t\t\t\tblock.outputs[2][i] = 0\n\t\t\t\t\tblock.outputs[3][i] = 0\n\t\t\t\t\tblock.outputs[4][i] = 0\n\t\t\t\t\tblock.outputs[5][i] = 0\n\t\t\tbreak;\n\t\t\tcase 1:\n\t\t\tcase 2:\n\t\t\t\t\tstep(1)\n\t\t\t\t\tblock.outputs[0][i] = 0\n\t\t\t\t\tblock.outputs[1][i] = 10\n\t\t\t\t\tblock.outputs[2][i] = 0\n\t\t\t\t\tblock.outputs[3][i] = 0\n\t\t\t\t\tblock.outputs[4][i] = 0\n\t\t\t\t\tblock.outputs[5][i] = 0\n\t\t\tbreak;\n\t\t\tcase 3:\n\t\t\tcase 4:\n\t\t\t\t\tstep(2)\n\t\t\t\t\tblock.outputs[0][i] = 0\n\t\t\t\t\tblock.outputs[1][i] = 0\n\t\t\t\t\tblock.outputs[2][i] = 10\n\t\t\t\t\tblock.outputs[3][i] = 0\n\t\t\t\t\tblock.outputs[4][i] = 0\n\t\t\t\t\tblock.outputs[5][i] = 0\n\t\t\tbreak;\n\t\t\tcase 5:\n\t\t\tcase 6:\n\t\t\t\t\tstep(3)\n\t\t\t\t\tblock.outputs[0][i] = 0\n\t\t\t\t\tblock.outputs[1][i] = 0\n\t\t\t\t\tblock.outputs[2][i] = 0\n\t\t\t\t\tblock.outputs[3][i] = 10\n\t\t\t\t\tblock.outputs[4][i] = 0\n\t\t\t\t\tblock.outputs[5][i] = 0\n\t\t\tbreak;\n\t\t\tcase 7:\n\t\t\tcase 8:\n\t\t\t\t\tstep(4)\n\t\t\t\t\tblock.outputs[0][i] = 0\n\t\t\t\t\tblock.outputs[1][i] = 0\n\t\t\t\t\tblock.outputs[2][i] = 0\n\t\t\t\t\tblock.outputs[3][i] = 0\n\t\t\t\t\tblock.outputs[4][i] = 10\n\t\t\t\t\tblock.outputs[5][i] = 0\n\t\t\tbreak;\n\t\t\tcase 9:\n\t\t\t\t\tstep(5)\n\t\t\t\t\tblock.outputs[0][i] = 0\n\t\t\t\t\tblock.outputs[1][i] = 0\n\t\t\t\t\tblock.outputs[2][i] = 0\n\t\t\t\t\tblock.outputs[3][i] = 0\n\t\t\t\t\tblock.outputs[4][i] = 0\n\t\t\t\t\tblock.outputs[5][i] = 10\n\t\t\tbreak;\t\t\t\t\n\n\n\t\t}\n\n\t\t// }\n\t\t// if (block.inputs[0][i] > 5){\n\t\t// \t// if the switcher case is false, pass input 0 to output 0\n\t\t// \tif (switcher === false) {\n\t\t// \t\tblock.outputs[0][i] = 10\n\t\t// \t\tblock.outputs[1][i] = 0\n\t\t\t\t\n\t\t// \t} // if the switcher case is true, pass input 0 to output 1\n\t\t// \t\telse {\n\t\t// \t\tblock.outputs[1][i] = 10\n\t\t// \t\tblock.outputs[0][i] = 0\n\t\t// \t}\t\n\t\t// }\n\n\t} \n\t\n\n}\n"
+        "path": "/Users/audiobeing/gitshow3/module3.js",
+        "script": "// module3.js is a gate sequencer, which takes as its only input a signal. It compares the input \tsignal amplitude against 6 logical conditions, and sends a gate out of one of the 6 outputs. \n\n// Inputs: IN1\n// Outputs: OUT1, OUT2, OUT3, OUT4, OUT5, OUT6\n\n\nconfig.frameDivider = 1\nconfig.bufferSize = 16\n\nvar phase = 0\n\nfunction step(step){\n\tdisplay('output: ' + step)\n}\n\nfunction process(block) {\t\n\t// Set all samples in output buffer\n\tfor (var i = 0; i < block.bufferSize; i++) {\n\t\t// IN1: signal input value ranges 0-10, and is thus tested against the switch case below\n\t\tlet switcher = Math.floor(block.inputs[0][i])\n\t\tswitch (switcher){\n\t\t\t// output 0\n\t\t\tcase 0:\n\t\t\t\t\tstep(0)\n\t\t\t\t\tblock.outputs[0][i] = 10\n\t\t\t\t\tblock.outputs[1][i] = 0\n\t\t\t\t\tblock.outputs[2][i] = 0\n\t\t\t\t\tblock.outputs[3][i] = 0\n\t\t\t\t\tblock.outputs[4][i] = 0\n\t\t\t\t\tblock.outputs[5][i] = 0\n\t\t\tbreak;\n\t\t\t// output 1\n\t\t\tcase 1:\n\t\t\tcase 2:\n\t\t\t\t\tstep(1)\n\t\t\t\t\tblock.outputs[0][i] = 0\n\t\t\t\t\tblock.outputs[1][i] = 10\n\t\t\t\t\tblock.outputs[2][i] = 0\n\t\t\t\t\tblock.outputs[3][i] = 0\n\t\t\t\t\tblock.outputs[4][i] = 0\n\t\t\t\t\tblock.outputs[5][i] = 0\n\t\t\tbreak;\n\n\t\t\t// output 2\n\t\t\tcase 3:\n\t\t\tcase 4:\n\t\t\t\t\tstep(2)\n\t\t\t\t\tblock.outputs[0][i] = 0\n\t\t\t\t\tblock.outputs[1][i] = 0\n\t\t\t\t\tblock.outputs[2][i] = 10\n\t\t\t\t\tblock.outputs[3][i] = 0\n\t\t\t\t\tblock.outputs[4][i] = 0\n\t\t\t\t\tblock.outputs[5][i] = 0\n\t\t\tbreak;\n\t\t\t// output 3\t\t\t\n\t\t\tcase 5:\n\t\t\tcase 6:\n\t\t\t\tstep(3)\n\t\t\t\tblock.outputs[0][i] = 0\n\t\t\t\tblock.outputs[1][i] = 0\n\t\t\t\tblock.outputs[2][i] = 0\n\t\t\t\tblock.outputs[3][i] = 10\n\t\t\t\tblock.outputs[4][i] = 0\n\t\t\t\tblock.outputs[5][i] = 0\n\t\t\tbreak;\n\t\t\t// output 4\n\t\t\tcase 7:\n\t\t\tcase 8:\n\t\t\t\t\tstep(4)\n\t\t\t\t\tblock.outputs[0][i] = 0\n\t\t\t\t\tblock.outputs[1][i] = 0\n\t\t\t\t\tblock.outputs[2][i] = 0\n\t\t\t\t\tblock.outputs[3][i] = 0\n\t\t\t\t\tblock.outputs[4][i] = 10\n\t\t\t\t\tblock.outputs[5][i] = 0\n\t\t\tbreak;\n\t\t\t// output 5\n\t\t\tcase 9:\n\t\t\t\t\tstep(5)\n\t\t\t\t\tblock.outputs[0][i] = 0\n\t\t\t\t\tblock.outputs[1][i] = 0\n\t\t\t\t\tblock.outputs[2][i] = 0\n\t\t\t\t\tblock.outputs[3][i] = 0\n\t\t\t\t\tblock.outputs[4][i] = 0\n\t\t\t\t\tblock.outputs[5][i] = 10\n\t\t\tbreak;\t\t\t\t\n\t\t}\n\t} \n\t\n\n}\n"
       },
       "pos": [
         16,
@@ -139,7 +139,7 @@
     {
       "id": 23,
       "plugin": "Core",
-      "version": "1.1.5",
+      "version": "1.1.6",
       "model": "Notes",
       "params": [],
       "text": "recording! this little module simplifies things so we don't have to use jack+daw\n\nremember to save the recording to the git repo, but don't let it be larger than 20MB~",
@@ -164,15 +164,15 @@
         },
         {
           "id": 2,
-          "value": -2.32999969
+          "value": 2.82700443
         },
         {
           "id": 3,
-          "value": 0.0
+          "value": 0.0870000571
         },
         {
           "id": 4,
-          "value": 0.0
+          "value": 0.139499992
         },
         {
           "id": 5,
@@ -180,7 +180,7 @@
         },
         {
           "id": 6,
-          "value": 0.0570000969
+          "value": 0.284999847
         }
       ],
       "rightModuleId": 39,
@@ -197,7 +197,7 @@
       "params": [
         {
           "id": 0,
-          "value": 0.0
+          "value": 0.654000163
         },
         {
           "id": 1,
@@ -239,23 +239,23 @@
         },
         {
           "id": 2,
-          "value": 22.4399929
+          "value": 31.8900032
         },
         {
           "id": 3,
-          "value": 0.5
+          "value": 0.34400019
         },
         {
           "id": 4,
-          "value": 0.5
+          "value": 0.444500148
         },
         {
           "id": 5,
-          "value": 0.99849999
+          "value": 0.701499939
         },
         {
           "id": 6,
-          "value": 0.350000054
+          "value": 0.529999912
         },
         {
           "id": 7,
@@ -305,11 +305,11 @@
         },
         {
           "id": 2,
-          "value": 37.7399979
+          "value": 19.8299789
         },
         {
           "id": 3,
-          "value": 0.375499785
+          "value": 0.613999903
         },
         {
           "id": 4,
@@ -371,7 +371,7 @@
         },
         {
           "id": 2,
-          "value": -0.342000037
+          "value": 0.555000305
         },
         {
           "id": 3,
@@ -387,7 +387,7 @@
         },
         {
           "id": 6,
-          "value": 0.0
+          "value": 0.386999875
         },
         {
           "id": 7,
@@ -399,7 +399,7 @@
         },
         {
           "id": 9,
-          "value": 0.372000009
+          "value": 0.573000193
         },
         {
           "id": 10,
@@ -431,11 +431,11 @@
         },
         {
           "id": 1,
-          "value": 1.0
+          "value": 0.0
         },
         {
           "id": 2,
-          "value": -4.34599829
+          "value": -1.34899914
         },
         {
           "id": 3,
@@ -443,7 +443,7 @@
         },
         {
           "id": 4,
-          "value": 0.5
+          "value": 0.699501038
         }
       ],
       "leftModuleId": 28,
@@ -461,11 +461,11 @@
       "params": [
         {
           "id": 0,
-          "value": 7.0
+          "value": 2.0
         },
         {
           "id": 1,
-          "value": 7.0
+          "value": 11.0
         },
         {
           "id": 2,
@@ -525,7 +525,7 @@
         },
         {
           "id": 16,
-          "value": 0.99999994
+          "value": 0.997600853
         },
         {
           "id": 17,
@@ -1051,6 +1051,22 @@
       "inputModuleId": 44,
       "inputId": 3,
       "color": "#c9b70e"
+    },
+    {
+      "id": 413,
+      "outputModuleId": 28,
+      "outputId": 1,
+      "inputModuleId": 36,
+      "inputId": 0,
+      "color": "#0986ad"
+    },
+    {
+      "id": 415,
+      "outputModuleId": 28,
+      "outputId": 0,
+      "inputModuleId": 41,
+      "inputId": 0,
+      "color": "#c91847"
     }
   ]
 }

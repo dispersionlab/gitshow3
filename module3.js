@@ -22,11 +22,11 @@ function process(block) {
 			// output 0
 			case 0:
 					step(0)
-					block.outputs[0][i] = 10
-					block.outputs[1][i] = 0
+					block.outputs[0][i] = 20
+					block.outputs[1][i] = 10
 					block.outputs[2][i] = 0
 					block.outputs[3][i] = 0
-					block.outputs[4][i] = 0
+					block.outputs[4][i] = 10
 					block.outputs[5][i] = 0
 			break;
 			// output 1
@@ -43,6 +43,9 @@ function process(block) {
 
 			// output 2
 			case 3:
+				step(6)
+				block.outputs[0][i] = 10
+				block.outputs[5][i] = 10
 			case 4:
 					step(2)
 					block.outputs[0][i] = 0
@@ -68,7 +71,7 @@ function process(block) {
 			case 8:
 					step(4)
 					block.outputs[0][i] = 0
-					block.outputs[1][i] = 0
+					block.outputs[1][i] = 10
 					block.outputs[2][i] = 0
 					block.outputs[3][i] = 0
 					block.outputs[4][i] = 10
@@ -78,14 +81,18 @@ function process(block) {
 			case 9:
 					step(5)
 					block.outputs[0][i] = 0
-					block.outputs[1][i] = 0
-					block.outputs[2][i] = 0
+					block.outputs[1][i] = rand(11); 
+					block.outputs[2][i] = 10
 					block.outputs[3][i] = 0
 					block.outputs[4][i] = 0
-					block.outputs[5][i] = 10
+					block.outputs[5][i] = rand(10)
 			break;				
 		}
 	} 
 	
 
+}
+
+function rand(n){
+	return Math.floor(Math.random(n)); 
 }
