@@ -32,7 +32,7 @@
       "params": [
         {
           "id": 0,
-          "value": 0.585000038
+          "value": 0.960000277
         },
         {
           "id": 1,
@@ -79,11 +79,11 @@
       "params": [
         {
           "id": 0,
-          "value": 0.53700006
+          "value": 0.556500077
         },
         {
           "id": 1,
-          "value": 0.0
+          "value": 0.558000088
         },
         {
           "id": 2,
@@ -129,7 +129,7 @@
       "leftModuleId": 39,
       "data": {
         "path": "/Users/audiobeing/gitshow3/module3.js",
-        "script": "// module3.js is a gate sequencer, which takes as its only input a signal. It compares the input \tsignal amplitude against 6 logical conditions, and sends a gate out of one of the 6 outputs. \n\n// Inputs: IN1\n// Outputs: OUT1, OUT2, OUT3, OUT4, OUT5, OUT6\n\n\nconfig.frameDivider = 1\nconfig.bufferSize = 16\n\nvar phase = 0\n\nfunction step(step){\n\tdisplay('output: ' + step)\n}\n\nfunction process(block) {\t\n\t// Set all samples in output buffer\n\tfor (var i = 0; i < block.bufferSize; i++) {\n\t\t// IN1: signal input value ranges 0-10, and is thus tested against the switch case below\n\t\tlet switcher = Math.floor(block.inputs[0][i])\n\t\tswitch (switcher){\n\t\t\t// output 0\n\t\t\tcase 0:\n\t\t\t\t\tstep(0)\n\t\t\t\t\tblock.outputs[0][i] = 10\n\t\t\t\t\tblock.outputs[1][i] = 0\n\t\t\t\t\tblock.outputs[2][i] = 0\n\t\t\t\t\tblock.outputs[3][i] = 0\n\t\t\t\t\tblock.outputs[4][i] = 0\n\t\t\t\t\tblock.outputs[5][i] = 0\n\t\t\tbreak;\n\t\t\t// output 1\n\t\t\tcase 1:\n\t\t\tcase 2:\n\t\t\t\t\tstep(1)\n\t\t\t\t\tblock.outputs[0][i] = 0\n\t\t\t\t\tblock.outputs[1][i] = 10\n\t\t\t\t\tblock.outputs[2][i] = 0\n\t\t\t\t\tblock.outputs[3][i] = 0\n\t\t\t\t\tblock.outputs[4][i] = 0\n\t\t\t\t\tblock.outputs[5][i] = 0\n\t\t\tbreak;\n\n\t\t\t// output 2\n\t\t\tcase 3:\n\t\t\tcase 4:\n\t\t\t\t\tstep(2)\n\t\t\t\t\tblock.outputs[0][i] = 0\n\t\t\t\t\tblock.outputs[1][i] = 0\n\t\t\t\t\tblock.outputs[2][i] = 10\n\t\t\t\t\tblock.outputs[3][i] = 0\n\t\t\t\t\tblock.outputs[4][i] = 0\n\t\t\t\t\tblock.outputs[5][i] = 0\n\t\t\tbreak;\n\t\t\t// output 3\t\t\t\n\t\t\tcase 5:\n\t\t\tcase 6:\n\t\t\t\tstep(3)\n\t\t\t\tblock.outputs[0][i] = 0\n\t\t\t\tblock.outputs[1][i] = 0\n\t\t\t\tblock.outputs[2][i] = 0\n\t\t\t\tblock.outputs[3][i] = 10\n\t\t\t\tblock.outputs[4][i] = 0\n\t\t\t\tblock.outputs[5][i] = 0\n\t\t\tbreak;\n\t\t\t// output 4\n\t\t\tcase 7:\n\t\t\tcase 8:\n\t\t\t\t\tstep(4)\n\t\t\t\t\tblock.outputs[0][i] = 0\n\t\t\t\t\tblock.outputs[1][i] = 0\n\t\t\t\t\tblock.outputs[2][i] = 0\n\t\t\t\t\tblock.outputs[3][i] = 0\n\t\t\t\t\tblock.outputs[4][i] = 10\n\t\t\t\t\tblock.outputs[5][i] = 0\n\t\t\tbreak;\n\t\t\t// output 5\n\t\t\tcase 9:\n\t\t\t\t\tstep(5)\n\t\t\t\t\tblock.outputs[0][i] = 0\n\t\t\t\t\tblock.outputs[1][i] = 0\n\t\t\t\t\tblock.outputs[2][i] = 0\n\t\t\t\t\tblock.outputs[3][i] = 0\n\t\t\t\t\tblock.outputs[4][i] = 0\n\t\t\t\t\tblock.outputs[5][i] = 10\n\t\t\tbreak;\t\t\t\t\n\t\t}\n\t} \n\t\n\n}\n"
+        "script": "// module3.js is a gate sequencer, which takes as its only input a signal. It compares the input \tsignal amplitude against 6 logical conditions, and sends a gate out of one of the 6 outputs. \n\n// Inputs: IN1\n// Outputs: OUT1, OUT2, OUT3, OUT4, OUT5, OUT6\n\n\nconfig.frameDivider = 1\nconfig.bufferSize = 16\n\nvar phase = 0\n\nfunction step(step){\n\tdisplay('output: ' + step)\n}\n\nfunction process(block) {\t\n\t// Set all samples in output buffer\n\tfor (var i = 0; i < block.bufferSize; i++) {\n\t\t// IN1: signal input value ranges 0-10, and is thus tested against the switch case below\n\t\tlet switcher = Math.floor(block.inputs[0][i])\n\t\tswitch (switcher){\n\t\t\t// output 0\n\t\t\tcase 0:\n\t\t\t\t\tstep(0)\n\t\t\t\t\tblock.outputs[0][i] = 20\n\t\t\t\t\tblock.outputs[1][i] = 10\n\t\t\t\t\tblock.outputs[2][i] = 0\n\t\t\t\t\tblock.outputs[3][i] = 1 \n\t\t\t\t\tblock.outputs[4][i] = 10\n\t\t\t\t\tblock.outputs[5][i] = 0\n\t\t\tbreak;\n\t\t\t// output 1\n\t\t\tcase 1:\n\t\t\tcase 2:\n\t\t\t\t\tstep(1)\n\t\t\t\t\tblock.outputs[0][i] = 0\n\t\t\t\t\tblock.outputs[1][i] = 10\n\t\t\t\t\tblock.outputs[2][i] = 0\n\t\t\t\t\tblock.outputs[3][i] = 0\n\t\t\t\t\tblock.outputs[4][i] = 0\n\t\t\t\t\tblock.outputs[5][i] = 0\n\t\t\tbreak;\n\n\t\t\t// output 2\n\t\t\tcase 3:\n\t\t\t\tstep(3)\n\t\t\t\tblock.outputs[0][i] = 10\n\t\t\t\tblock.outputs[5][i] = 10\n\t\t\tcase 4:\n\t\t\t\t\tstep(2)\n\t\t\t\t\tblock.outputs[0][i] = 0\n\t\t\t\t\tblock.outputs[1][i] = 0\n\t\t\t\t\tblock.outputs[2][i] = 10\n\t\t\t\t\tblock.outputs[3][i] = 0\n\t\t\t\t\tblock.outputs[4][i] = 0\n\t\t\t\t\tblock.outputs[5][i] = 0\n\t\t\tbreak;\n\t\t\t// output 3\t\t\t\n\t\t\tcase 5:\n\t\t\tcase 6:\n\t\t\t\tstep(3)\n\t\t\t\tblock.outputs[0][i] = 0\n\t\t\t\tblock.outputs[1][i] = 0\n\t\t\t\tblock.outputs[2][i] = 0\n\t\t\t\tblock.outputs[3][i] = 10\n\t\t\t\tblock.outputs[4][i] = 0\n\t\t\t\tblock.outputs[5][i] = 0\n\t\t\tbreak;\n\t\t\t// output 4\n\t\t\tcase 7:\n\t\t\tcase 8:\n\t\t\t\t\tstep(4)\n\t\t\t\t\tblock.outputs[0][i] = 0\n\t\t\t\t\tblock.outputs[1][i] = 10\n\t\t\t\t\tblock.outputs[2][i] = 0\n\t\t\t\t\tblock.outputs[3][i] = 0\n\t\t\t\t\tblock.outputs[4][i] = 10\n\t\t\t\t\tblock.outputs[5][i] = 0\n\t\t\tbreak;\n\t\t\t// output 5\n\t\t\tcase 9:\n\t\t\t\t\tstep(5)\n\t\t\t\t\tblock.outputs[0][i] = 0\n\t\t\t\t\tblock.outputs[1][i] = rand(11); \n\t\t\t\t\tblock.outputs[2][i] = 10\n\t\t\t\t\tblock.outputs[3][i] = 0\n\t\t\t\t\tblock.outputs[4][i] = 0\n\t\t\t\t\tblock.outputs[5][i] = rand(10)\n\t\t\tbreak;\t\t\t\t\n\t\t}\n\t} \n\t\n\n}\n\nfunction rand(n){\n\treturn Math.floor(Math.random(n)); \n}\n"
       },
       "pos": [
         16,
@@ -160,27 +160,27 @@
         },
         {
           "id": 1,
-          "value": 1.0
+          "value": 0.0
         },
         {
           "id": 2,
-          "value": 2.82700443
+          "value": 2.4130044
         },
         {
           "id": 3,
-          "value": 0.0870000571
+          "value": 0.303000122
         },
         {
           "id": 4,
-          "value": 0.139499992
+          "value": 0.0255000163
         },
         {
           "id": 5,
-          "value": 0.5
+          "value": 0.585260689
         },
         {
           "id": 6,
-          "value": 0.284999847
+          "value": 0.406499565
         }
       ],
       "rightModuleId": 39,
@@ -197,7 +197,7 @@
       "params": [
         {
           "id": 0,
-          "value": 0.654000163
+          "value": 0.891000748
         },
         {
           "id": 1,
@@ -243,7 +243,7 @@
         },
         {
           "id": 3,
-          "value": 0.34400019
+          "value": 0.284000039
         },
         {
           "id": 4,
@@ -271,7 +271,7 @@
         },
         {
           "id": 10,
-          "value": 1.0
+          "value": 0.256000191
         },
         {
           "id": 11,
@@ -305,7 +305,7 @@
         },
         {
           "id": 2,
-          "value": 19.8299789
+          "value": 35.7599792
         },
         {
           "id": 3,
@@ -317,7 +317,7 @@
         },
         {
           "id": 5,
-          "value": 0.83950007
+          "value": 0.65800035
         },
         {
           "id": 6,
@@ -363,19 +363,19 @@
       "params": [
         {
           "id": 0,
-          "value": 0.0
+          "value": 1.0
         },
         {
           "id": 1,
-          "value": 0.0
+          "value": 2.0
         },
         {
           "id": 2,
-          "value": 0.555000305
+          "value": -0.42599991
         },
         {
           "id": 3,
-          "value": 0.65199995
+          "value": -0.122000061
         },
         {
           "id": 4,
@@ -387,11 +387,11 @@
         },
         {
           "id": 6,
-          "value": 0.386999875
+          "value": 0.855000496
         },
         {
           "id": 7,
-          "value": 0.582000136
+          "value": 0.57000041
         },
         {
           "id": 8,
@@ -415,7 +415,7 @@
         }
       ],
       "pos": [
-        32,
+        33,
         0
       ]
     },
@@ -427,23 +427,23 @@
       "params": [
         {
           "id": 0,
-          "value": 0.0
+          "value": 1.0
         },
         {
           "id": 1,
-          "value": 0.0
+          "value": 1.0
         },
         {
           "id": 2,
-          "value": -1.34899914
+          "value": 2.98899603
         },
         {
           "id": 3,
-          "value": 1.49549973
+          "value": 0.703499913
         },
         {
           "id": 4,
-          "value": 0.699501038
+          "value": 0.243500441
         }
       ],
       "leftModuleId": 28,
@@ -665,7 +665,7 @@
         },
         {
           "id": 16,
-          "value": 1.0
+          "value": 1.22560048
         },
         {
           "id": 17,
@@ -861,14 +861,6 @@
       "color": "#c91847"
     },
     {
-      "id": 376,
-      "outputModuleId": 36,
-      "outputId": 0,
-      "inputModuleId": 2,
-      "inputId": 1,
-      "color": "#0986ad"
-    },
-    {
       "id": 377,
       "outputModuleId": 36,
       "outputId": 1,
@@ -962,14 +954,6 @@
       "outputId": 0,
       "inputModuleId": 36,
       "inputId": 2,
-      "color": "#c9b70e"
-    },
-    {
-      "id": 340,
-      "outputModuleId": 39,
-      "outputId": 0,
-      "inputModuleId": 17,
-      "inputId": 0,
       "color": "#c9b70e"
     },
     {
@@ -1067,6 +1051,94 @@
       "inputModuleId": 41,
       "inputId": 0,
       "color": "#c91847"
+    },
+    {
+      "id": 376,
+      "outputModuleId": 36,
+      "outputId": 0,
+      "inputModuleId": 2,
+      "inputId": 1,
+      "color": "#0986ad"
+    },
+    {
+      "id": 416,
+      "outputModuleId": 38,
+      "outputId": 2,
+      "inputModuleId": 36,
+      "inputId": 1,
+      "color": "#0986ad"
+    },
+    {
+      "id": 418,
+      "outputModuleId": 28,
+      "outputId": 2,
+      "inputModuleId": 17,
+      "inputId": 0,
+      "color": "#0c8e15"
+    },
+    {
+      "id": 421,
+      "outputModuleId": 17,
+      "outputId": 5,
+      "inputModuleId": 38,
+      "inputId": 0,
+      "color": "#0c8e15"
+    },
+    {
+      "id": 422,
+      "outputModuleId": 28,
+      "outputId": 3,
+      "inputModuleId": 43,
+      "inputId": 0,
+      "color": "#c91847"
+    },
+    {
+      "id": 423,
+      "outputModuleId": 28,
+      "outputId": 3,
+      "inputModuleId": 43,
+      "inputId": 32,
+      "color": "#0986ad"
+    },
+    {
+      "id": 424,
+      "outputModuleId": 43,
+      "outputId": 0,
+      "inputModuleId": 38,
+      "inputId": 8,
+      "color": "#c9b70e"
+    },
+    {
+      "id": 425,
+      "outputModuleId": 17,
+      "outputId": 2,
+      "inputModuleId": 38,
+      "inputId": 1,
+      "color": "#0c8e15"
+    },
+    {
+      "id": 426,
+      "outputModuleId": 38,
+      "outputId": 1,
+      "inputModuleId": 37,
+      "inputId": 1,
+      "color": "#0986ad"
+    },
+    {
+      "id": 427,
+      "outputModuleId": 38,
+      "outputId": 2,
+      "inputModuleId": 37,
+      "inputId": 2,
+      "color": "#c9b70e"
+    },
+    {
+      "id": 428,
+      "outputModuleId": 37,
+      "outputId": 0,
+      "inputModuleId": 2,
+      "inputId": 8,
+      "color": "#0c8e15"
     }
   ]
 }

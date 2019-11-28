@@ -25,7 +25,7 @@ function process(block) {
 					block.outputs[0][i] = 20
 					block.outputs[1][i] = 10
 					block.outputs[2][i] = 0
-					block.outputs[3][i] = 0
+					block.outputs[3][i] = 1 
 					block.outputs[4][i] = 10
 					block.outputs[5][i] = 0
 			break;
@@ -43,7 +43,7 @@ function process(block) {
 
 			// output 2
 			case 3:
-				step(6)
+				step(3)
 				block.outputs[0][i] = 10
 				block.outputs[5][i] = 10
 			case 4:
