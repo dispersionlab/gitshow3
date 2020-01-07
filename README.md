@@ -12,11 +12,25 @@ IMPORTANT: Note that all filenames referenced in this readme include a #. This i
 
 Please only edit these files and **do not** rename them. Do not modify the readme, markdown_examples, .gitignore, or any of the files in /admin or /web. Thanks!
 
+<<<<<<< HEAD
 This process will take ~10 hours per week to complete. 
 
 
 It is **extremely important** that you follow the exact steps detailed in this document every week, as Michael may have added modifications to the process based on feedback.
 
+=======
+-
+-
+This process will take ~10 hours per week to complete. 
+
+-
+-
+
+It is **extremely important** that you follow the exact steps detailed in this document every week, as Michael may have added modifications to the process based on feedback.
+
+-
+-
+>>>>>>> a66628cd5e113962c13542ca954c3de7cc8d2b94
 
 # The Process
 
