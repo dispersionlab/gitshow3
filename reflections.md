@@ -26,10 +26,14 @@ The beat from the intro returns going into the fadeout, but more subdued than be
 
 ---
 
-## Thoughts:
+## Thoughts & Performance:
 
 The score leaves much to the imagination, which is intriguing, and allows for creative freedom when using the instrument. This also adds an idea of discovery. You feel like you've found something when you 'decrypt' what the score means.
 
 It reads almost like a haiku.
 
 The piece goes back and forth in its 'musicality' never allowing the music to take hold fully before moving to the next idea.
+
+The instrument itself is very volatile. It is difficult to get a musical sound out of. It's very easy to have it just become a kind of white noise generator. With some coaxing it can produce some very calming sounds, but just as easily switch back to the crunchy, harsh sound it has in the recording.
+
+The abstract nature of the score instructions ready you for the somewhat complicated machine that lies ahead of you. It is not for the faint of heart.
