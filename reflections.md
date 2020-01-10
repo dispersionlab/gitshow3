@@ -1,7 +1,21 @@
 ## Score:
 
->find your flow
+>-find your flow
+
+Fade in with a crunchy drum like sound.
+
+Flow appears to take hold from the start, keeping a steady rhythm.
 
 >-flip the switches and triggers to change the flow
 
+At ~0:21 the beat begins to change, more sounds begin to enter.
+
+Beats are skipped, a wet, droplet like sound takes over coming in at somewhat random intervals.
+
 >-change streams
+
+At ~0:50, the piece changes, with the droplets taking over the beat, and the kick sound becoming more random.
+
+At ~1:04 the song changes again, losing the beat somewhat, with the two main sounds almost fighting each other.
+
+The droplets become more like strings at 1:20, nearing the end, before the piece fades out.
