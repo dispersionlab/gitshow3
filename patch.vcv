@@ -7,7 +7,7 @@
       "version": "1.1.5",
       "model": "AudioInterface",
       "params": [],
-      "leftModuleId": 35,
+      "leftModuleId": 57,
       "rightModuleId": 8,
       "data": {
         "audio": {
@@ -20,7 +20,7 @@
         }
       },
       "pos": [
-        92,
+        97,
         1
       ]
     },
@@ -36,25 +36,25 @@
         },
         {
           "id": 1,
-          "value": 1.13278508
+          "value": 1.00550592
         },
         {
           "id": 2,
-          "value": 0.0
+          "value": 1.0733875
         },
         {
           "id": 3,
-          "value": 0.0
+          "value": 0.398808569
         },
         {
           "id": 4,
           "value": 0.963080287
         }
       ],
-      "leftModuleId": 44,
+      "leftModuleId": 38,
       "rightModuleId": 35,
       "pos": [
-        72,
+        67,
         1
       ]
     },
@@ -68,7 +68,7 @@
       "rightModuleId": 23,
       "text": "patch instructions:\n\n1. Choose an audio driver and device in the AUDIO-8 module.\n\n2. Drag knobs up/down. Hold Ctrl (Cmd on Mac) while dragging to fine-tune. Right-click knobs to edit, or double-click to initialize.\n\n3. Drag ports to create and move 3ables. Stack multiple cables on outputs by holding Ctrl (Cmd on Mac) and dragging from an output.\n\n4. Right-click on an empty rack space to add new modules.",
       "pos": [
-        102,
+        107,
         1
       ]
     },
@@ -131,7 +131,7 @@
       "rightModuleId": 53,
       "data": {
         "path": "F:\\Dropbox\\Grad School\\YorkU\\VSL\\gitshow3\\module.js",
-        "script": "// module3.js is a gate sequencer, which takes as its only input a signal. It compares the input \tsignal amplitude against 6 logical conditions, and sends a gate out of one of the 6 outputs.\n\n// Inputs: IN1\n// Outputs: OUT1, OUT2, OUT3, OUT4, OUT5, OUT6\n\n\nconfig.frameDivider = 1\nconfig.bufferSize = 16\n\nvar phase = 0\n\nfunction step(step){\n\tdisplay('output: ' + step)\n}\n\nfunction process(block) {\n\t// Set all samples in output buffer\n\tfor (var i = 0; i < block.bufferSize; i++) {\n\t\t// IN1: signal input value ranges 0-10, and is thus tested against the switch case below\n\t\tlet switcher = Math.floor(block.inputs[0][i])\n\t\tswitch (switcher){\n\t\t\t// output 0\n\t\t\tcase 0:\n\t\t\t\t\tstep(0)\n\t\t\t\t\tblock.outputs[0][i] = 20\n\t\t\t\t\tblock.outputs[1][i] = 10\n\t\t\t\t\tblock.outputs[2][i] = 0\n\t\t\t\t\tblock.outputs[3][i] = 1\n\t\t\t\t\tblock.outputs[4][i] = 10\n\t\t\t\t\tblock.outputs[5][i] = 0\n\t\t\tbreak;\n\t\t\t// output 1\n\t\t\tcase 1:\n\t\t\tcase 2:\n\t\t\t\t\tstep(1)\n\t\t\t\t\tblock.outputs[0][i] = 0\n\t\t\t\t\tblock.outputs[1][i] = 10\n\t\t\t\t\tblock.outputs[2][i] = 0\n\t\t\t\t\tblock.outputs[3][i] = 0\n\t\t\t\t\tblock.outputs[4][i] = 0\n\t\t\t\t\tblock.outputs[5][i] = 0\n\t\t\tbreak;\n\n\t\t\t// output 2\n\t\t\tcase 3:\n\t\t\t\tstep(3)\n\t\t\t\tblock.outputs[0][i] = 10\n\t\t\t\tblock.outputs[5][i] = 10\n\t\t\tcase 4:\n\t\t\t\t\tstep(2)\n\t\t\t\t\tblock.outputs[0][i] = 0\n\t\t\t\t\tblock.outputs[1][i] = 0\n\t\t\t\t\tblock.outputs[2][i] = 10\n\t\t\t\t\tblock.outputs[3][i] = 0\n\t\t\t\t\tblock.outputs[4][i] = 0\n\t\t\t\t\tblock.outputs[5][i] = 0\n\t\t\tbreak;\n\t\t\t// output 3\n\t\t\tcase 5:\n\t\t\tcase 6:\n\t\t\t\tstep(3)\n\t\t\t\tblock.outputs[0][i] = 0\n\t\t\t\tblock.outputs[1][i] = 0\n\t\t\t\tblock.outputs[2][i] = 0\n\t\t\t\tblock.outputs[3][i] = 10\n\t\t\t\tblock.outputs[4][i] = 0\n\t\t\t\tblock.outputs[5][i] = 0\n\t\t\tbreak;\n\t\t\t// output 4\n\t\t\tcase 7:\n\t\t\tcase 8:\n\t\t\t\t\tstep(4)\n\t\t\t\t\tblock.outputs[0][i] = 0\n\t\t\t\t\tblock.outputs[1][i] = 10\n\t\t\t\t\tblock.outputs[2][i] = 0\n\t\t\t\t\tblock.outputs[3][i] = 0\n\t\t\t\t\tblock.outputs[4][i] = 10\n\t\t\t\t\tblock.outputs[5][i] = 10\n\t\t\tbreak;\n\t\t\t// output 5\n\t\t\tcase 9:\n\t\t\t\t\tstep(5)\n\t\t\t\t\tblock.outputs[0][i] = 0\n\t\t\t\t\tblock.outputs[1][i] = rand(11);\n\t\t\t\t\tblock.outputs[2][i] = 10\n\t\t\t\t\tblock.outputs[3][i] = 0\n\t\t\t\t\tblock.outputs[4][i] = 0\n\t\t\t\t\tblock.outputs[5][i] = 10\n\t\t\tbreak;\n\t\t}\n\t}\n\n\n}\n\nfunction rand(n){\n\treturn Math.floor(Math.random(n));\n}\n"
+        "script": "// module3.js is a gate sequencer, which takes as its only input a signal. It compares the input \tsignal amplitude against 6 logical conditions, and sends a gate out of one of the 6 outputs.\n\n// Inputs: IN1\n// Outputs: OUT1, OUT2, OUT3, OUT4, OUT5, OUT6\n\n\nconfig.frameDivider = 1\nconfig.bufferSize = 16\n\nvar phase = 0\n\nfunction step(step){\n\tdisplay('output: ' + step)\n}\n\nfunction process(block) {\n\t// Set all samples in output buffer\n\tfor (var i = 0; i < block.bufferSize; i++) {\n\t\t// IN1: signal input value ranges 0-10, and is thus tested against the switch case below\n\t\tlet switcher = Math.floor(block.inputs[0][i])\n\t\tswitch (switcher){\n\t\t\t// output 0\n\t\t\tcase 0:\n\t\t\t\t\tstep(0)\n\t\t\t\t\tblock.outputs[0][i] = 20\n\t\t\t\t\tblock.outputs[1][i] = 10\n\t\t\t\t\tblock.outputs[2][i] = 0\n\t\t\t\t\tblock.outputs[3][i] = 1\n\t\t\t\t\tblock.outputs[4][i] = 10\n\t\t\t\t\tblock.outputs[5][i] = 0\n\t\t\tbreak;\n\t\t\t// output 1\n\t\t\tcase 1:\n\t\t\tcase 2:\n\t\t\t\t\tstep(1)\n\t\t\t\t\tblock.outputs[0][i] = 0\n\t\t\t\t\tblock.outputs[1][i] = 10\n\t\t\t\t\tblock.outputs[2][i] = 0\n\t\t\t\t\tblock.outputs[3][i] = 0\n\t\t\t\t\tblock.outputs[4][i] = 0\n\t\t\t\t\tblock.outputs[5][i] = 0\n\t\t\tbreak;\n\n\t\t\t// output 2\n\t\t\tcase 3:\n\t\t\t\tstep(3)\n\t\t\t\tblock.outputs[0][i] = 10\n\t\t\t\tblock.outputs[5][i] = 10\n\t\t\tcase 4:\n\t\t\t\t\tstep(2)\n\t\t\t\t\tblock.outputs[0][i] = 0\n\t\t\t\t\tblock.outputs[1][i] = 0\n\t\t\t\t\tblock.outputs[2][i] = 10\n\t\t\t\t\tblock.outputs[3][i] = 0\n\t\t\t\t\tblock.outputs[4][i] = 0\n\t\t\t\t\tblock.outputs[5][i] = 0\n\t\t\tbreak;\n\t\t\t// output 3\n\t\t\tcase 5:\n\t\t\tcase 6:\n\t\t\t\tstep(3)\n\t\t\t\tblock.outputs[0][i] = 0\n\t\t\t\tblock.outputs[1][i] = 0\n\t\t\t\tblock.outputs[2][i] = 0\n\t\t\t\tblock.outputs[3][i] = 10\n\t\t\t\tblock.outputs[4][i] = 0\n\t\t\t\tblock.outputs[5][i] = 0\n\t\t\tbreak;\n\t\t\t// output 4\n\t\t\tcase 7:\n\t\t\tcase 8:\n\t\t\t\t\tstep(4)\n\t\t\t\t\tblock.outputs[0][i] = 0\n\t\t\t\t\tblock.outputs[1][i] = 10\n\t\t\t\t\tblock.outputs[2][i] = 0\n\t\t\t\t\tblock.outputs[3][i] = 0\n\t\t\t\t\tblock.outputs[4][i] = 10\n\t\t\t\t\tblock.outputs[5][i] = 10\n\t\t\tbreak;\n\t\t\t// output 5\n\t\t\tcase 9:\n\t\t\t\t\tstep(5)\n\t\t\t\t\tblock.outputs[0][i] = 0\n\t\t\t\t\tblock.outputs[1][i] = 0\n\t\t\t\t\tblock.outputs[2][i] = 10\n\t\t\t\t\tblock.outputs[3][i] = 0\n\t\t\t\t\tblock.outputs[4][i] = 0\n\t\t\t\t\tblock.outputs[5][i] = 10\n\t\t\tbreak;\n\t\t}\n\t}\n\n\n}\n"
       },
       "pos": [
         16,
@@ -147,7 +147,7 @@
       "leftModuleId": 8,
       "text": "recording! this little module simplifies things so we don't have to use jack+daw\n\nremember to save the recording to the git repo, but don't let it be larger than 20MB~",
       "pos": [
-        118,
+        123,
         1
       ]
     },
@@ -204,15 +204,15 @@
         },
         {
           "id": 1,
-          "value": 1.17096889
+          "value": 1.13702822
         },
         {
           "id": 2,
-          "value": 0.0
+          "value": 1.16248417
         },
         {
           "id": 3,
-          "value": 0.0
+          "value": 0.335168689
         },
         {
           "id": 4,
@@ -220,9 +220,9 @@
         }
       ],
       "leftModuleId": 2,
-      "rightModuleId": 1,
+      "rightModuleId": 57,
       "pos": [
-        82,
+        77,
         1
       ]
     },
@@ -529,40 +529,11 @@
           "value": 0.0
         }
       ],
-      "rightModuleId": 57,
+      "leftModuleId": 65,
+      "rightModuleId": 58,
       "pos": [
-        107,
+        96,
         2
-      ]
-    },
-    {
-      "id": 44,
-      "plugin": "VCV-Recorder",
-      "version": "1.0.1",
-      "model": "Recorder",
-      "params": [
-        {
-          "id": 0,
-          "value": 0.273000777
-        },
-        {
-          "id": 1,
-          "value": 0.0
-        }
-      ],
-      "leftModuleId": 38,
-      "rightModuleId": 2,
-      "data": {
-        "format": "wav",
-        "path": "/Users/audiobeing/gitshow3/recording3.wav",
-        "incrementPath": true,
-        "sampleRate": 44100,
-        "depth": 16,
-        "bitRate": 320000
-      },
-      "pos": [
-        67,
-        1
       ]
     },
     {
@@ -625,7 +596,7 @@
         }
       ],
       "leftModuleId": 53,
-      "rightModuleId": 44,
+      "rightModuleId": 2,
       "pos": [
         49,
         1
@@ -786,11 +757,11 @@
         },
         {
           "id": 4,
-          "value": 0.465000331
+          "value": 0.502500176
         },
         {
           "id": 5,
-          "value": -0.73900032
+          "value": 0.625000119
         },
         {
           "id": 6,
@@ -852,7 +823,7 @@
       "params": [
         {
           "id": 0,
-          "value": 0.0
+          "value": 1.36500084
         },
         {
           "id": 1,
@@ -871,11 +842,11 @@
           "value": 1.0
         }
       ],
-      "leftModuleId": 45,
-      "rightModuleId": 58,
+      "leftModuleId": 35,
+      "rightModuleId": 1,
       "pos": [
-        113,
-        2
+        87,
+        1
       ]
     },
     {
@@ -901,9 +872,10 @@
           "value": 0.502000153
         }
       ],
-      "leftModuleId": 57,
+      "leftModuleId": 45,
+      "rightModuleId": 78,
       "pos": [
-        123,
+        102,
         2
       ]
     },
@@ -956,7 +928,7 @@
       "params": [
         {
           "id": 0,
-          "value": 0.730000019
+          "value": 0.800500095
         },
         {
           "id": 1,
@@ -990,7 +962,7 @@
       "params": [
         {
           "id": 0,
-          "value": 0.734499991
+          "value": 0.776500046
         },
         {
           "id": 1,
@@ -1010,6 +982,7 @@
         }
       ],
       "leftModuleId": 64,
+      "rightModuleId": 45,
       "pos": [
         88,
         2
@@ -1443,6 +1416,7 @@
         }
       ],
       "leftModuleId": 76,
+      "rightModuleId": 79,
       "data": {
         "configurations": [
           {
@@ -1475,6 +1449,76 @@
         93,
         3
       ]
+    },
+    {
+      "id": 78,
+      "plugin": "VCV-Recorder",
+      "version": "1.0.1",
+      "model": "Recorder",
+      "params": [
+        {
+          "id": 0,
+          "value": 1.40800011
+        },
+        {
+          "id": 1,
+          "value": 0.0
+        }
+      ],
+      "leftModuleId": 58,
+      "data": {
+        "format": "wav",
+        "path": "",
+        "incrementPath": true,
+        "sampleRate": 44100,
+        "depth": 16,
+        "bitRate": 320000
+      },
+      "pos": [
+        110,
+        2
+      ]
+    },
+    {
+      "id": 79,
+      "plugin": "Fundamental",
+      "version": "1.4.0",
+      "model": "VCO",
+      "params": [
+        {
+          "id": 0,
+          "value": 1.0
+        },
+        {
+          "id": 1,
+          "value": 1.0
+        },
+        {
+          "id": 2,
+          "value": 0.0
+        },
+        {
+          "id": 3,
+          "value": 0.0
+        },
+        {
+          "id": 4,
+          "value": 0.0
+        },
+        {
+          "id": 5,
+          "value": 0.5
+        },
+        {
+          "id": 6,
+          "value": 0.0
+        }
+      ],
+      "leftModuleId": 77,
+      "pos": [
+        107,
+        3
+      ]
     }
   ],
   "cables": [
@@ -1485,14 +1529,6 @@
       "inputModuleId": 1,
       "inputId": 1,
       "color": "#c91847"
-    },
-    {
-      "id": 411,
-      "outputModuleId": 2,
-      "outputId": 0,
-      "inputModuleId": 44,
-      "inputId": 2,
-      "color": "#0986ad"
     },
     {
       "id": 429,
@@ -1509,14 +1545,6 @@
       "inputModuleId": 39,
       "inputId": 0,
       "color": "#0c8e15"
-    },
-    {
-      "id": 412,
-      "outputModuleId": 35,
-      "outputId": 0,
-      "inputModuleId": 44,
-      "inputId": 3,
-      "color": "#c9b70e"
     },
     {
       "id": 481,
@@ -1671,22 +1699,6 @@
       "color": "#c91847"
     },
     {
-      "id": 380,
-      "outputModuleId": 37,
-      "outputId": 0,
-      "inputModuleId": 64,
-      "inputId": 3,
-      "color": "#c9b70e"
-    },
-    {
-      "id": 530,
-      "outputModuleId": 64,
-      "outputId": 0,
-      "inputModuleId": 2,
-      "inputId": 3,
-      "color": "#0c8e15"
-    },
-    {
       "id": 532,
       "outputModuleId": 38,
       "outputId": 9,
@@ -1701,14 +1713,6 @@
       "inputModuleId": 65,
       "inputId": 3,
       "color": "#0c8e15"
-    },
-    {
-      "id": 539,
-      "outputModuleId": 65,
-      "outputId": 0,
-      "inputModuleId": 35,
-      "inputId": 3,
-      "color": "#c91847"
     },
     {
       "id": 542,
@@ -1879,14 +1883,6 @@
       "color": "#c9b70e"
     },
     {
-      "id": 599,
-      "outputModuleId": 17,
-      "outputId": 1,
-      "inputModuleId": 53,
-      "inputId": 3,
-      "color": "#0c8e15"
-    },
-    {
       "id": 492,
       "outputModuleId": 53,
       "outputId": 2,
@@ -1919,14 +1915,6 @@
       "color": "#0986ad"
     },
     {
-      "id": 606,
-      "outputModuleId": 53,
-      "outputId": 9,
-      "inputModuleId": 38,
-      "inputId": 2,
-      "color": "#c9b70e"
-    },
-    {
       "id": 609,
       "outputModuleId": 17,
       "outputId": 3,
@@ -1940,22 +1928,6 @@
       "outputId": 4,
       "inputModuleId": 37,
       "inputId": 5,
-      "color": "#c9b70e"
-    },
-    {
-      "id": 614,
-      "outputModuleId": 38,
-      "outputId": 10,
-      "inputModuleId": 64,
-      "inputId": 0,
-      "color": "#0986ad"
-    },
-    {
-      "id": 615,
-      "outputModuleId": 38,
-      "outputId": 10,
-      "inputModuleId": 65,
-      "inputId": 0,
       "color": "#c9b70e"
     },
     {
@@ -2027,6 +1999,78 @@
       "outputModuleId": 77,
       "outputId": 2,
       "inputModuleId": 67,
+      "inputId": 0,
+      "color": "#0c8e15"
+    },
+    {
+      "id": 640,
+      "outputModuleId": 2,
+      "outputId": 0,
+      "inputModuleId": 78,
+      "inputId": 2,
+      "color": "#0c8e15"
+    },
+    {
+      "id": 641,
+      "outputModuleId": 35,
+      "outputId": 0,
+      "inputModuleId": 78,
+      "inputId": 3,
+      "color": "#c91847"
+    },
+    {
+      "id": 615,
+      "outputModuleId": 38,
+      "outputId": 10,
+      "inputModuleId": 64,
+      "inputId": 2,
+      "color": "#c9b70e"
+    },
+    {
+      "id": 642,
+      "outputModuleId": 65,
+      "outputId": 0,
+      "inputModuleId": 35,
+      "inputId": 3,
+      "color": "#0986ad"
+    },
+    {
+      "id": 643,
+      "outputModuleId": 64,
+      "outputId": 0,
+      "inputModuleId": 2,
+      "inputId": 3,
+      "color": "#c9b70e"
+    },
+    {
+      "id": 645,
+      "outputModuleId": 37,
+      "outputId": 0,
+      "inputModuleId": 64,
+      "inputId": 3,
+      "color": "#0986ad"
+    },
+    {
+      "id": 606,
+      "outputModuleId": 53,
+      "outputId": 4,
+      "inputModuleId": 38,
+      "inputId": 2,
+      "color": "#c9b70e"
+    },
+    {
+      "id": 646,
+      "outputModuleId": 38,
+      "outputId": 4,
+      "inputModuleId": 64,
+      "inputId": 0,
+      "color": "#c9b70e"
+    },
+    {
+      "id": 647,
+      "outputModuleId": 38,
+      "outputId": 4,
+      "inputModuleId": 65,
       "inputId": 0,
       "color": "#0c8e15"
     }
