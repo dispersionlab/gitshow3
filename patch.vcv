@@ -36,19 +36,19 @@
         },
         {
           "id": 1,
-          "value": 1.00550592
+          "value": 0.0
         },
         {
           "id": 2,
-          "value": 1.0733875
+          "value": 1.13702762
         },
         {
           "id": 3,
-          "value": 0.398808569
+          "value": 0.0
         },
         {
           "id": 4,
-          "value": 0.963080287
+          "value": 1.41421354
         }
       ],
       "leftModuleId": 38,
@@ -204,19 +204,19 @@
         },
         {
           "id": 1,
-          "value": 1.13702822
+          "value": 0.0
         },
         {
           "id": 2,
-          "value": 1.16248417
+          "value": 1.19218385
         },
         {
           "id": 3,
-          "value": 0.335168689
+          "value": 0.0
         },
         {
           "id": 4,
-          "value": 0.94327879
+          "value": 1.41421354
         }
       ],
       "leftModuleId": 2,
@@ -823,7 +823,7 @@
       "params": [
         {
           "id": 0,
-          "value": 1.36500084
+          "value": 0.0
         },
         {
           "id": 1,
@@ -1458,7 +1458,7 @@
       "params": [
         {
           "id": 0,
-          "value": 1.40800011
+          "value": 1.50699985
         },
         {
           "id": 1,
@@ -1468,8 +1468,8 @@
       "leftModuleId": 58,
       "data": {
         "format": "wav",
-        "path": "",
-        "incrementPath": true,
+        "path": "F:\\Dropbox\\Grad School\\YorkU\\VSL\\gitshow3/recording.wav",
+        "incrementPath": false,
         "sampleRate": 44100,
         "depth": 16,
         "bitRate": 320000

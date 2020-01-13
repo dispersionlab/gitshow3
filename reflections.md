@@ -37,3 +37,11 @@ The piece goes back and forth in its 'musicality' never allowing the music to ta
 The instrument itself is very volatile. It is difficult to get a musical sound out of. It's very easy to have it just become a kind of white noise generator. With some coaxing it can produce some very calming sounds, but just as easily switch back to the crunchy, harsh sound it has in the recording.
 
 The abstract nature of the score instructions ready you for the somewhat complicated machine that lies ahead of you. It is not for the faint of heart.
+
+## Process of Creation
+
+I liked some of the motifs from the original piece, and wanted to stay with some of those, but at the same time make it a little bit more listenable. I've never used a Turing module before, so I though this would be a good chance to create a kind of rhythm that is always evolving, but maintaining a consistent beat.
+
+The waves were to give a more natural feel to it, and contrast the otherwise harsh sounding synth, and also because I spent a lot of time making a really nice, entirely synthetic wave sound, and I wanted to include it.
+
+The instrument is larger than the previous creation, but in a way a little bit less adaptable. More of it is set in, and it takes longer to evolve a sound out of it. While I wanted it to be a little bit less intimidating to pick up, I'm not sure if that is possible.
