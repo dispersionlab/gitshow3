@@ -8,7 +8,7 @@
 
 Find your flow.
 
-Move with your flow.
+Add to your flow.
 
 Shift and change with the currents.
 
