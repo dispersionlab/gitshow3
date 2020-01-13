@@ -1,4 +1,4 @@
-// module3.js is a gate sequencer, which takes as its only input a signal. It compares the input 	signal amplitude against 6 logical conditions, and sends a gate out of one of the 6 outputs. 
+// module3.js is a gate sequencer, which takes as its only input a signal. It compares the input 	signal amplitude against 6 logical conditions, and sends a gate out of one of the 6 outputs.
 
 // Inputs: IN1
 // Outputs: OUT1, OUT2, OUT3, OUT4, OUT5, OUT6
@@ -13,7 +13,7 @@ function step(step){
 	display('output: ' + step)
 }
 
-function process(block) {	
+function process(block) {
 	// Set all samples in output buffer
 	for (var i = 0; i < block.bufferSize; i++) {
 		// IN1: signal input value ranges 0-10, and is thus tested against the switch case below
@@ -25,7 +25,7 @@ function process(block) {
 					block.outputs[0][i] = 20
 					block.outputs[1][i] = 10
 					block.outputs[2][i] = 0
-					block.outputs[3][i] = 1 
+					block.outputs[3][i] = 1
 					block.outputs[4][i] = 10
 					block.outputs[5][i] = 0
 			break;
@@ -55,7 +55,7 @@ function process(block) {
 					block.outputs[4][i] = 0
 					block.outputs[5][i] = 0
 			break;
-			// output 3			
+			// output 3
 			case 5:
 			case 6:
 				step(3)
@@ -75,24 +75,20 @@ function process(block) {
 					block.outputs[2][i] = 0
 					block.outputs[3][i] = 0
 					block.outputs[4][i] = 10
-					block.outputs[5][i] = 0
+					block.outputs[5][i] = 10
 			break;
 			// output 5
 			case 9:
 					step(5)
 					block.outputs[0][i] = 0
-					block.outputs[1][i] = rand(11); 
+					block.outputs[1][i] = 0
 					block.outputs[2][i] = 10
 					block.outputs[3][i] = 0
 					block.outputs[4][i] = 0
-					block.outputs[5][i] = rand(10)
-			break;				
+					block.outputs[5][i] = 10
+			break;
 		}
-	} 
-	
+	}
 
-}
 
-function rand(n){
-	return Math.floor(Math.random(n)); 
 }

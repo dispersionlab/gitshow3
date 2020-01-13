@@ -36,11 +36,11 @@
         },
         {
           "id": 1,
-          "value": 0.0
+          "value": 1.13278508
         },
         {
           "id": 2,
-          "value": 1.17238343
+          "value": 0.0
         },
         {
           "id": 3,
@@ -130,8 +130,8 @@
       "leftModuleId": 39,
       "rightModuleId": 53,
       "data": {
-        "path": "/Users/audiobeing/gitshow3/module3.js",
-        "script": "// module3.js is a gate sequencer, which takes as its only input a signal. It compares the input \tsignal amplitude against 6 logical conditions, and sends a gate out of one of the 6 outputs. \n\n// Inputs: IN1\n// Outputs: OUT1, OUT2, OUT3, OUT4, OUT5, OUT6\n\n\nconfig.frameDivider = 1\nconfig.bufferSize = 16\n\nvar phase = 0\n\nfunction step(step){\n\tdisplay('output: ' + step)\n}\n\nfunction process(block) {\t\n\t// Set all samples in output buffer\n\tfor (var i = 0; i < block.bufferSize; i++) {\n\t\t// IN1: signal input value ranges 0-10, and is thus tested against the switch case below\n\t\tlet switcher = Math.floor(block.inputs[0][i])\n\t\tswitch (switcher){\n\t\t\t// output 0\n\t\t\tcase 0:\n\t\t\t\t\tstep(0)\n\t\t\t\t\tblock.outputs[0][i] = 20\n\t\t\t\t\tblock.outputs[1][i] = 10\n\t\t\t\t\tblock.outputs[2][i] = 0\n\t\t\t\t\tblock.outputs[3][i] = 1 \n\t\t\t\t\tblock.outputs[4][i] = 10\n\t\t\t\t\tblock.outputs[5][i] = 0\n\t\t\tbreak;\n\t\t\t// output 1\n\t\t\tcase 1:\n\t\t\tcase 2:\n\t\t\t\t\tstep(1)\n\t\t\t\t\tblock.outputs[0][i] = 0\n\t\t\t\t\tblock.outputs[1][i] = 10\n\t\t\t\t\tblock.outputs[2][i] = 0\n\t\t\t\t\tblock.outputs[3][i] = 0\n\t\t\t\t\tblock.outputs[4][i] = 0\n\t\t\t\t\tblock.outputs[5][i] = 0\n\t\t\tbreak;\n\n\t\t\t// output 2\n\t\t\tcase 3:\n\t\t\t\tstep(3)\n\t\t\t\tblock.outputs[0][i] = 10\n\t\t\t\tblock.outputs[5][i] = 10\n\t\t\tcase 4:\n\t\t\t\t\tstep(2)\n\t\t\t\t\tblock.outputs[0][i] = 0\n\t\t\t\t\tblock.outputs[1][i] = 0\n\t\t\t\t\tblock.outputs[2][i] = 10\n\t\t\t\t\tblock.outputs[3][i] = 0\n\t\t\t\t\tblock.outputs[4][i] = 0\n\t\t\t\t\tblock.outputs[5][i] = 0\n\t\t\tbreak;\n\t\t\t// output 3\t\t\t\n\t\t\tcase 5:\n\t\t\tcase 6:\n\t\t\t\tstep(3)\n\t\t\t\tblock.outputs[0][i] = 0\n\t\t\t\tblock.outputs[1][i] = 0\n\t\t\t\tblock.outputs[2][i] = 0\n\t\t\t\tblock.outputs[3][i] = 10\n\t\t\t\tblock.outputs[4][i] = 0\n\t\t\t\tblock.outputs[5][i] = 0\n\t\t\tbreak;\n\t\t\t// output 4\n\t\t\tcase 7:\n\t\t\tcase 8:\n\t\t\t\t\tstep(4)\n\t\t\t\t\tblock.outputs[0][i] = 0\n\t\t\t\t\tblock.outputs[1][i] = 10\n\t\t\t\t\tblock.outputs[2][i] = 0\n\t\t\t\t\tblock.outputs[3][i] = 0\n\t\t\t\t\tblock.outputs[4][i] = 10\n\t\t\t\t\tblock.outputs[5][i] = 0\n\t\t\tbreak;\n\t\t\t// output 5\n\t\t\tcase 9:\n\t\t\t\t\tstep(5)\n\t\t\t\t\tblock.outputs[0][i] = 0\n\t\t\t\t\tblock.outputs[1][i] = rand(11); \n\t\t\t\t\tblock.outputs[2][i] = 10\n\t\t\t\t\tblock.outputs[3][i] = 0\n\t\t\t\t\tblock.outputs[4][i] = 0\n\t\t\t\t\tblock.outputs[5][i] = rand(10)\n\t\t\tbreak;\t\t\t\t\n\t\t}\n\t} \n\t\n\n}\n\nfunction rand(n){\n\treturn Math.floor(Math.random(n)); \n}\n"
+        "path": "F:\\Dropbox\\Grad School\\YorkU\\VSL\\gitshow3\\module.js",
+        "script": "// module3.js is a gate sequencer, which takes as its only input a signal. It compares the input \tsignal amplitude against 6 logical conditions, and sends a gate out of one of the 6 outputs.\n\n// Inputs: IN1\n// Outputs: OUT1, OUT2, OUT3, OUT4, OUT5, OUT6\n\n\nconfig.frameDivider = 1\nconfig.bufferSize = 16\n\nvar phase = 0\n\nfunction step(step){\n\tdisplay('output: ' + step)\n}\n\nfunction process(block) {\n\t// Set all samples in output buffer\n\tfor (var i = 0; i < block.bufferSize; i++) {\n\t\t// IN1: signal input value ranges 0-10, and is thus tested against the switch case below\n\t\tlet switcher = Math.floor(block.inputs[0][i])\n\t\tswitch (switcher){\n\t\t\t// output 0\n\t\t\tcase 0:\n\t\t\t\t\tstep(0)\n\t\t\t\t\tblock.outputs[0][i] = 20\n\t\t\t\t\tblock.outputs[1][i] = 10\n\t\t\t\t\tblock.outputs[2][i] = 0\n\t\t\t\t\tblock.outputs[3][i] = 1\n\t\t\t\t\tblock.outputs[4][i] = 10\n\t\t\t\t\tblock.outputs[5][i] = 0\n\t\t\tbreak;\n\t\t\t// output 1\n\t\t\tcase 1:\n\t\t\tcase 2:\n\t\t\t\t\tstep(1)\n\t\t\t\t\tblock.outputs[0][i] = 0\n\t\t\t\t\tblock.outputs[1][i] = 10\n\t\t\t\t\tblock.outputs[2][i] = 0\n\t\t\t\t\tblock.outputs[3][i] = 0\n\t\t\t\t\tblock.outputs[4][i] = 0\n\t\t\t\t\tblock.outputs[5][i] = 0\n\t\t\tbreak;\n\n\t\t\t// output 2\n\t\t\tcase 3:\n\t\t\t\tstep(3)\n\t\t\t\tblock.outputs[0][i] = 10\n\t\t\t\tblock.outputs[5][i] = 10\n\t\t\tcase 4:\n\t\t\t\t\tstep(2)\n\t\t\t\t\tblock.outputs[0][i] = 0\n\t\t\t\t\tblock.outputs[1][i] = 0\n\t\t\t\t\tblock.outputs[2][i] = 10\n\t\t\t\t\tblock.outputs[3][i] = 0\n\t\t\t\t\tblock.outputs[4][i] = 0\n\t\t\t\t\tblock.outputs[5][i] = 0\n\t\t\tbreak;\n\t\t\t// output 3\n\t\t\tcase 5:\n\t\t\tcase 6:\n\t\t\t\tstep(3)\n\t\t\t\tblock.outputs[0][i] = 0\n\t\t\t\tblock.outputs[1][i] = 0\n\t\t\t\tblock.outputs[2][i] = 0\n\t\t\t\tblock.outputs[3][i] = 10\n\t\t\t\tblock.outputs[4][i] = 0\n\t\t\t\tblock.outputs[5][i] = 0\n\t\t\tbreak;\n\t\t\t// output 4\n\t\t\tcase 7:\n\t\t\tcase 8:\n\t\t\t\t\tstep(4)\n\t\t\t\t\tblock.outputs[0][i] = 0\n\t\t\t\t\tblock.outputs[1][i] = 10\n\t\t\t\t\tblock.outputs[2][i] = 0\n\t\t\t\t\tblock.outputs[3][i] = 0\n\t\t\t\t\tblock.outputs[4][i] = 10\n\t\t\t\t\tblock.outputs[5][i] = 10\n\t\t\tbreak;\n\t\t\t// output 5\n\t\t\tcase 9:\n\t\t\t\t\tstep(5)\n\t\t\t\t\tblock.outputs[0][i] = 0\n\t\t\t\t\tblock.outputs[1][i] = rand(11);\n\t\t\t\t\tblock.outputs[2][i] = 10\n\t\t\t\t\tblock.outputs[3][i] = 0\n\t\t\t\t\tblock.outputs[4][i] = 0\n\t\t\t\t\tblock.outputs[5][i] = 10\n\t\t\tbreak;\n\t\t}\n\t}\n\n\n}\n\nfunction rand(n){\n\treturn Math.floor(Math.random(n));\n}\n"
       },
       "pos": [
         16,
@@ -204,11 +204,11 @@
         },
         {
           "id": 1,
-          "value": 0.0
+          "value": 1.17096889
         },
         {
           "id": 2,
-          "value": 1.19359493
+          "value": 0.0
         },
         {
           "id": 3,
@@ -1379,7 +1379,7 @@
         },
         {
           "id": 2,
-          "value": 0.5
+          "value": 0.497000039
         },
         {
           "id": 3,
@@ -1516,14 +1516,6 @@
       "outputId": 0,
       "inputModuleId": 44,
       "inputId": 3,
-      "color": "#c9b70e"
-    },
-    {
-      "id": 474,
-      "outputModuleId": 28,
-      "outputId": 1,
-      "inputModuleId": 17,
-      "inputId": 0,
       "color": "#c9b70e"
     },
     {
@@ -1967,14 +1959,6 @@
       "color": "#c9b70e"
     },
     {
-      "id": 619,
-      "outputModuleId": 77,
-      "outputId": 2,
-      "inputModuleId": 77,
-      "inputId": 8,
-      "color": "#c9b70e"
-    },
-    {
       "id": 620,
       "outputModuleId": 77,
       "outputId": 4,
@@ -2013,6 +1997,38 @@
       "inputModuleId": 37,
       "inputId": 3,
       "color": "#c91847"
+    },
+    {
+      "id": 634,
+      "outputModuleId": 28,
+      "outputId": 0,
+      "inputModuleId": 17,
+      "inputId": 0,
+      "color": "#0c8e15"
+    },
+    {
+      "id": 636,
+      "outputModuleId": 17,
+      "outputId": 5,
+      "inputModuleId": 77,
+      "inputId": 8,
+      "color": "#c9b70e"
+    },
+    {
+      "id": 638,
+      "outputModuleId": 77,
+      "outputId": 2,
+      "inputModuleId": 66,
+      "inputId": 0,
+      "color": "#c91847"
+    },
+    {
+      "id": 637,
+      "outputModuleId": 77,
+      "outputId": 2,
+      "inputModuleId": 67,
+      "inputId": 0,
+      "color": "#0c8e15"
     }
   ]
 }
