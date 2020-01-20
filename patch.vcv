@@ -82,7 +82,7 @@
         },
         {
           "id": 4,
-          "value": 0.0
+          "value": 0.32550016
         },
         {
           "id": 5,
@@ -139,7 +139,7 @@
         },
         {
           "id": 2,
-          "value": -0.871980846
+          "value": -0.817981064
         },
         {
           "id": 3,
@@ -214,11 +214,11 @@
         },
         {
           "id": 2,
-          "value": 0.954998374
+          "value": 1.00900042
         },
         {
           "id": 3,
-          "value": 0.513000071
+          "value": 1.59749937
         },
         {
           "id": 4,
@@ -240,11 +240,11 @@
       "params": [
         {
           "id": 0,
-          "value": 0.0
+          "value": 2.0
         },
         {
           "id": 1,
-          "value": 0.0
+          "value": 2.0
         },
         {
           "id": 2,
@@ -280,7 +280,7 @@
         },
         {
           "id": 10,
-          "value": 1.0
+          "value": 0.0
         },
         {
           "id": 11,
@@ -371,7 +371,7 @@
         },
         {
           "id": 1,
-          "value": 0.39500013
+          "value": 0.594500482
         },
         {
           "id": 2,
@@ -387,7 +387,7 @@
         },
         {
           "id": 5,
-          "value": 1.0
+          "value": 0.328000098
         },
         {
           "id": 6,
@@ -480,7 +480,7 @@
       "leftModuleId": 1,
       "data": {
         "format": "wav",
-        "path": "F:\\Dropbox\\Grad School\\YorkU\\VSL\\gitshow3/recording.wav",
+        "path": "/Users/magfoto/Library/Mobile Documents/com~apple~CloudDocs/York U - PhD Study/_courses/DIGM 6020 - Vertical Studio Lab II/gitshow3/recording.wav",
         "incrementPath": false,
         "sampleRate": 44100,
         "depth": 16,
@@ -499,7 +499,7 @@
       "params": [
         {
           "id": 0,
-          "value": -2.0
+          "value": -1.0
         },
         {
           "id": 1,
@@ -507,7 +507,7 @@
         },
         {
           "id": 2,
-          "value": 0.0529998764
+          "value": 0.0500000119
         }
       ],
       "leftModuleId": 47,
@@ -559,28 +559,12 @@
       "color": "#0c8e15"
     },
     {
-      "id": 660,
-      "outputModuleId": 28,
-      "outputId": 0,
-      "inputModuleId": 39,
-      "inputId": 0,
-      "color": "#0c8e15"
-    },
-    {
       "id": 674,
       "outputModuleId": 53,
       "outputId": 0,
       "inputModuleId": 38,
       "inputId": 2,
       "color": "#0c8e15"
-    },
-    {
-      "id": 675,
-      "outputModuleId": 51,
-      "outputId": 0,
-      "inputModuleId": 38,
-      "inputId": 3,
-      "color": "#0986ad"
     },
     {
       "id": 677,
@@ -679,27 +663,59 @@
       "color": "#0c8e15"
     },
     {
-      "id": 698,
-      "outputModuleId": 35,
-      "outputId": 0,
-      "inputModuleId": 47,
-      "inputId": 1,
-      "color": "#0986ad"
-    },
-    {
-      "id": 699,
-      "outputModuleId": 2,
-      "outputId": 0,
-      "inputModuleId": 47,
-      "inputId": 0,
-      "color": "#c9b70e"
-    },
-    {
       "id": 700,
       "outputModuleId": 38,
       "outputId": 6,
       "inputModuleId": 80,
       "inputId": 2,
+      "color": "#0c8e15"
+    },
+    {
+      "id": 707,
+      "outputModuleId": 51,
+      "outputId": 0,
+      "inputModuleId": 17,
+      "inputId": 4,
+      "color": "#c91847"
+    },
+    {
+      "id": 708,
+      "outputModuleId": 17,
+      "outputId": 4,
+      "inputModuleId": 35,
+      "inputId": 5,
+      "color": "#0986ad"
+    },
+    {
+      "id": 709,
+      "outputModuleId": 17,
+      "outputId": 4,
+      "inputModuleId": 2,
+      "inputId": 6,
+      "color": "#c9b70e"
+    },
+    {
+      "id": 712,
+      "outputModuleId": 53,
+      "outputId": 4,
+      "inputModuleId": 28,
+      "inputId": 2,
+      "color": "#0986ad"
+    },
+    {
+      "id": 698,
+      "outputModuleId": 35,
+      "outputId": 0,
+      "inputModuleId": 47,
+      "inputId": 0,
+      "color": "#0986ad"
+    },
+    {
+      "id": 710,
+      "outputModuleId": 28,
+      "outputId": 3,
+      "inputModuleId": 53,
+      "inputId": 0,
       "color": "#0c8e15"
     }
   ]
