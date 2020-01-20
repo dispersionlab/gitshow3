@@ -12,7 +12,7 @@
       "data": {
         "audio": {
           "driver": 5,
-          "deviceName": "ffff: Crusher Wireless",
+          "deviceName": "Apple Inc.: Built-in Output",
           "offset": 0,
           "maxChannels": 8,
           "sampleRate": 48000,
@@ -86,7 +86,7 @@
         },
         {
           "id": 5,
-          "value": 0.0
+          "value": 0.365999967
         },
         {
           "id": 6,
@@ -113,13 +113,14 @@
           "value": 0.0
         }
       ],
+      "leftModuleId": 81,
       "rightModuleId": 38,
       "data": {
         "path": "F:\\Dropbox\\Grad School\\YorkU\\VSL\\gitshow3\\module.js",
         "script": "// module3.js is a gate sequencer, which takes as its only input a signal. It compares the input \tsignal amplitude against 6 logical conditions, and sends a gate out of one of the 6 outputs.\n\n// Inputs: IN1\n// Outputs: OUT1, OUT2, OUT3, OUT4, OUT5, OUT6\n\n\nconfig.frameDivider = 1\nconfig.bufferSize = 16\n\nvar phase = 0\n\nfunction step(step){\n\tdisplay('output: ' + step)\n}\n\nfunction process(block) {\n\t// Set all samples in output buffer\n\tfor (var i = 0; i < block.bufferSize; i++) {\n\t\t// IN1: signal input value ranges 0-10, and is thus tested against the switch case below\n\t\tlet switcher = Math.floor(block.inputs[0][i])\n\t\tswitch (switcher){\n\t\t\t// output 0\n\t\t\tcase 0:\n\t\t\t\t\tstep(0)\n\t\t\t\t\tblock.outputs[0][i] = 20\n\t\t\t\t\tblock.outputs[1][i] = 10\n\t\t\t\t\tblock.outputs[2][i] = 0\n\t\t\t\t\tblock.outputs[3][i] = 1\n\t\t\t\t\tblock.outputs[4][i] = 10\n\t\t\t\t\tblock.outputs[5][i] = 0\n\t\t\tbreak;\n\t\t\t// output 1\n\t\t\tcase 1:\n\t\t\tcase 2:\n\t\t\t\t\tstep(1)\n\t\t\t\t\tblock.outputs[0][i] = 0\n\t\t\t\t\tblock.outputs[1][i] = 10\n\t\t\t\t\tblock.outputs[2][i] = 0\n\t\t\t\t\tblock.outputs[3][i] = 0\n\t\t\t\t\tblock.outputs[4][i] = 0\n\t\t\t\t\tblock.outputs[5][i] = 0\n\t\t\tbreak;\n\n\t\t\t// output 2\n\t\t\tcase 3:\n\t\t\t\tstep(3)\n\t\t\t\tblock.outputs[0][i] = 10\n\t\t\t\tblock.outputs[5][i] = 10\n\t\t\tcase 4:\n\t\t\t\t\tstep(2)\n\t\t\t\t\tblock.outputs[0][i] = 0\n\t\t\t\t\tblock.outputs[1][i] = 0\n\t\t\t\t\tblock.outputs[2][i] = 10\n\t\t\t\t\tblock.outputs[3][i] = 0\n\t\t\t\t\tblock.outputs[4][i] = 0\n\t\t\t\t\tblock.outputs[5][i] = 0\n\t\t\tbreak;\n\t\t\t// output 3\n\t\t\tcase 5:\n\t\t\tcase 6:\n\t\t\t\tstep(3)\n\t\t\t\tblock.outputs[0][i] = 0\n\t\t\t\tblock.outputs[1][i] = 0\n\t\t\t\tblock.outputs[2][i] = 0\n\t\t\t\tblock.outputs[3][i] = 10\n\t\t\t\tblock.outputs[4][i] = 0\n\t\t\t\tblock.outputs[5][i] = 0\n\t\t\tbreak;\n\t\t\t// output 4\n\t\t\tcase 7:\n\t\t\tcase 8:\n\t\t\t\t\tstep(4)\n\t\t\t\t\tblock.outputs[0][i] = 0\n\t\t\t\t\tblock.outputs[1][i] = 10\n\t\t\t\t\tblock.outputs[2][i] = 0\n\t\t\t\t\tblock.outputs[3][i] = 0\n\t\t\t\t\tblock.outputs[4][i] = 10\n\t\t\t\t\tblock.outputs[5][i] = 10\n\t\t\tbreak;\n\t\t\t// output 5\n\t\t\tcase 9:\n\t\t\t\t\tstep(5)\n\t\t\t\t\tblock.outputs[0][i] = 0\n\t\t\t\t\tblock.outputs[1][i] = 0\n\t\t\t\t\tblock.outputs[2][i] = 10\n\t\t\t\t\tblock.outputs[3][i] = 0\n\t\t\t\t\tblock.outputs[4][i] = 0\n\t\t\t\t\tblock.outputs[5][i] = 10\n\t\t\tbreak;\n\t\t}\n\t}\n\n\n}\n"
       },
       "pos": [
-        17,
+        19,
         1
       ]
     },
@@ -139,23 +140,23 @@
         },
         {
           "id": 2,
-          "value": -0.817981064
+          "value": -8.0
         },
         {
           "id": 3,
-          "value": 0.27000016
+          "value": 0.0
         },
         {
           "id": 4,
-          "value": 0.546000242
+          "value": 0.0
         },
         {
           "id": 5,
-          "value": 0.43042016
+          "value": 0.5
         },
         {
           "id": 6,
-          "value": 0.635999978
+          "value": 0.0
         }
       ],
       "rightModuleId": 39,
@@ -214,7 +215,7 @@
         },
         {
           "id": 2,
-          "value": 1.00900042
+          "value": 1.15299988
         },
         {
           "id": 3,
@@ -222,7 +223,7 @@
         },
         {
           "id": 4,
-          "value": 0.678999901
+          "value": 0.579999804
         }
       ],
       "leftModuleId": 28,
@@ -240,7 +241,7 @@
       "params": [
         {
           "id": 0,
-          "value": 2.0
+          "value": 0.0
         },
         {
           "id": 1,
@@ -280,7 +281,7 @@
         },
         {
           "id": 10,
-          "value": 0.0
+          "value": 1.0
         },
         {
           "id": 11,
@@ -294,7 +295,7 @@
       "leftModuleId": 17,
       "rightModuleId": 47,
       "pos": [
-        32,
+        34,
         1
       ]
     },
@@ -344,18 +345,7 @@
         "external": 0
       },
       "pos": [
-        50,
-        1
-      ]
-    },
-    {
-      "id": 51,
-      "plugin": "Fundamental",
-      "version": "1.4.0",
-      "model": "Noise",
-      "params": [],
-      "pos": [
-        0,
+        52,
         1
       ]
     },
@@ -499,20 +489,46 @@
       "params": [
         {
           "id": 0,
-          "value": -1.0
+          "value": -5.0
         },
         {
           "id": 1,
-          "value": -0.692996979
+          "value": -5.52299643
         },
         {
           "id": 2,
-          "value": 0.0500000119
+          "value": 0.0049997936
         }
       ],
       "leftModuleId": 47,
       "pos": [
-        63,
+        65,
+        1
+      ]
+    },
+    {
+      "id": 81,
+      "plugin": "Core",
+      "version": "1.1.6",
+      "model": "Notes",
+      "params": [],
+      "leftModuleId": 82,
+      "rightModuleId": 17,
+      "text": "Turn FREQ dial up on the LFO-1 to 11 o'clock, and start fiddling with the OCTAVE DIAL on the EvenVCO.",
+      "pos": [
+        3,
+        1
+      ]
+    },
+    {
+      "id": 82,
+      "plugin": "Fundamental",
+      "version": "1.4.0",
+      "model": "Noise",
+      "params": [],
+      "rightModuleId": 81,
+      "pos": [
+        0,
         1
       ]
     }
@@ -671,14 +687,6 @@
       "color": "#0c8e15"
     },
     {
-      "id": 707,
-      "outputModuleId": 51,
-      "outputId": 0,
-      "inputModuleId": 17,
-      "inputId": 4,
-      "color": "#c91847"
-    },
-    {
       "id": 708,
       "outputModuleId": 17,
       "outputId": 4,
@@ -717,6 +725,46 @@
       "inputModuleId": 53,
       "inputId": 0,
       "color": "#0c8e15"
+    },
+    {
+      "id": 713,
+      "outputModuleId": 53,
+      "outputId": 13,
+      "inputModuleId": 17,
+      "inputId": 5,
+      "color": "#0c8e15"
+    },
+    {
+      "id": 718,
+      "outputModuleId": 82,
+      "outputId": 0,
+      "inputModuleId": 17,
+      "inputId": 4,
+      "color": "#c91847"
+    },
+    {
+      "id": 720,
+      "outputModuleId": 82,
+      "outputId": 1,
+      "inputModuleId": 38,
+      "inputId": 10,
+      "color": "#c9b70e"
+    },
+    {
+      "id": 721,
+      "outputModuleId": 82,
+      "outputId": 3,
+      "inputModuleId": 38,
+      "inputId": 11,
+      "color": "#0c8e15"
+    },
+    {
+      "id": 722,
+      "outputModuleId": 17,
+      "outputId": 5,
+      "inputModuleId": 38,
+      "inputId": 4,
+      "color": "#c91847"
     }
   ]
 }
