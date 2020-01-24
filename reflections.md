@@ -17,3 +17,6 @@ I enjoyed the playfulness of the recording. I liked how the noise would travel f
 The motif at round 15s is repeated with small changes throughout the piece; the pitch gradually increases, and the rate at which the noise changes channels from left to right also increases. The piece ends abruptly after a sustained low note.
 
 The recording fades in with clicks/pops over 8s.
+
+**Performing the Score:**
+I managed to find the motif fairly easily. I think the patch is pretty simple except the fact that it's using the Turing Machine module. The machine is a mystery to me.
