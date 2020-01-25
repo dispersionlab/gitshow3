@@ -118,7 +118,6 @@
           "value": 3.46000171
         }
       ],
-      "leftModuleId": 102,
       "rightModuleId": 100,
       "pos": [
         71,
@@ -313,7 +312,6 @@
           0,
           1,
           0,
-          1,
           0,
           0,
           0,
@@ -321,7 +319,8 @@
           0,
           0,
           0,
-          1,
+          0,
+          0,
           0,
           0,
           0
@@ -345,7 +344,7 @@
         },
         {
           "id": 1,
-          "value": 0.0599997342
+          "value": -0.0300002098
         },
         {
           "id": 2,
@@ -369,7 +368,6 @@
         }
       ],
       "leftModuleId": 90,
-      "rightModuleId": 102,
       "data": {
         "lastPath": "C:\\dispersion-lab\\gitshow3\\samples\\Babe Ruth - The Mexican_01.wav",
         "oscstate": 0
@@ -504,7 +502,7 @@
         },
         {
           "id": 12,
-          "value": 0.0
+          "value": 1.0
         },
         {
           "id": 13,
@@ -512,11 +510,11 @@
         },
         {
           "id": 14,
-          "value": 1.0
+          "value": 0.804999948
         },
         {
           "id": 15,
-          "value": -17.6580009
+          "value": -54.0
         },
         {
           "id": 16,
@@ -548,7 +546,7 @@
         },
         {
           "id": 23,
-          "value": 0.0
+          "value": 0.0270000007
         },
         {
           "id": 24,
@@ -573,7 +571,7 @@
       ],
       "leftModuleId": 121,
       "pos": [
-        62,
+        47,
         1
       ]
     },
@@ -588,166 +586,6 @@
       "pos": [
         3,
         0
-      ]
-    },
-    {
-      "id": 99,
-      "plugin": "dBiz",
-      "version": "1.1.2",
-      "model": "VCA4",
-      "params": [
-        {
-          "id": 0,
-          "value": 1.0
-        },
-        {
-          "id": 1,
-          "value": 1.0
-        },
-        {
-          "id": 2,
-          "value": 1.0
-        },
-        {
-          "id": 3,
-          "value": 1.0
-        },
-        {
-          "id": 4,
-          "value": 0.0
-        },
-        {
-          "id": 5,
-          "value": 0.0
-        },
-        {
-          "id": 6,
-          "value": 0.0
-        },
-        {
-          "id": 7,
-          "value": 0.0
-        },
-        {
-          "id": 8,
-          "value": 0.0
-        },
-        {
-          "id": 9,
-          "value": 0.0
-        },
-        {
-          "id": 10,
-          "value": 0.0
-        },
-        {
-          "id": 11,
-          "value": 0.0
-        },
-        {
-          "id": 12,
-          "value": 0.0
-        },
-        {
-          "id": 13,
-          "value": 0.0
-        },
-        {
-          "id": 14,
-          "value": 0.0
-        },
-        {
-          "id": 15,
-          "value": 0.0
-        },
-        {
-          "id": 16,
-          "value": 0.0
-        },
-        {
-          "id": 17,
-          "value": 0.0
-        },
-        {
-          "id": 18,
-          "value": 0.0
-        },
-        {
-          "id": 19,
-          "value": 0.0
-        },
-        {
-          "id": 20,
-          "value": 0.0
-        },
-        {
-          "id": 21,
-          "value": 0.0
-        },
-        {
-          "id": 22,
-          "value": 0.0
-        },
-        {
-          "id": 23,
-          "value": 0.0
-        },
-        {
-          "id": 24,
-          "value": 0.0
-        },
-        {
-          "id": 25,
-          "value": 0.0
-        },
-        {
-          "id": 26,
-          "value": 0.0
-        },
-        {
-          "id": 27,
-          "value": 0.0
-        },
-        {
-          "id": 28,
-          "value": 0.0
-        },
-        {
-          "id": 29,
-          "value": 0.0
-        },
-        {
-          "id": 30,
-          "value": 0.0
-        },
-        {
-          "id": 31,
-          "value": 0.0
-        }
-      ],
-      "data": {
-        "mutes": [
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1
-        ]
-      },
-      "pos": [
-        17,
-        2
       ]
     },
     {
@@ -820,8 +658,9 @@
         }
       ],
       "leftModuleId": 108,
+      "rightModuleId": 121,
       "pos": [
-        44,
+        31,
         1
       ]
     },
@@ -833,11 +672,11 @@
       "params": [
         {
           "id": 0,
-          "value": 4.5300045
+          "value": 1.29000676
         },
         {
           "id": 1,
-          "value": 0.584999263
+          "value": 0.134999081
         },
         {
           "id": 2,
@@ -860,15 +699,13 @@
           "value": 0.0
         }
       ],
-      "leftModuleId": 91,
-      "rightModuleId": 84,
       "data": {
         "lastPath": "C:\\dispersion-lab\\gitshow3\\samples\\Yellow Sunshine - Yellow Sunshine (Audio)_01.wav",
         "oscstate": 0
       },
       "pos": [
-        62,
-        0
+        70,
+        1
       ]
     },
     {
@@ -879,7 +716,7 @@
       "params": [
         {
           "id": 0,
-          "value": 95.7179871
+          "value": 58.2435303
         },
         {
           "id": 1,
@@ -894,6 +731,7 @@
           "value": 0.0
         }
       ],
+      "rightModuleId": 108,
       "data": {
         "onstate": 1
       },
@@ -925,6 +763,7 @@
           "value": 0.0
         }
       ],
+      "leftModuleId": 107,
       "rightModuleId": 101,
       "data": {
         "modes": [
@@ -933,7 +772,7 @@
         ]
       },
       "pos": [
-        38,
+        25,
         1
       ]
     },
@@ -1009,75 +848,26 @@
           "value": 0.0
         }
       ],
+      "leftModuleId": 101,
       "rightModuleId": 94,
       "pos": [
-        56,
+        41,
         1
       ]
     },
     {
-      "id": 126,
-      "plugin": "Fundamental",
-      "version": "1.4.0",
-      "model": "Mutes",
+      "id": 129,
+      "plugin": "Alikins",
+      "version": "1.0.1",
+      "model": "BigMuteButton",
       "params": [
         {
           "id": 0,
           "value": 0.0
-        },
-        {
-          "id": 1,
-          "value": 0.0
-        },
-        {
-          "id": 2,
-          "value": 0.0
-        },
-        {
-          "id": 3,
-          "value": 0.0
-        },
-        {
-          "id": 4,
-          "value": 0.0
-        },
-        {
-          "id": 5,
-          "value": 0.0
-        },
-        {
-          "id": 6,
-          "value": 0.0
-        },
-        {
-          "id": 7,
-          "value": 0.0
-        },
-        {
-          "id": 8,
-          "value": 0.0
-        },
-        {
-          "id": 9,
-          "value": 0.0
         }
       ],
-      "data": {
-        "states": [
-          true,
-          true,
-          true,
-          true,
-          true,
-          true,
-          true,
-          true,
-          true,
-          true
-        ]
-      },
       "pos": [
-        85,
+        87,
         1
       ]
     }
@@ -1122,38 +912,6 @@
       "inputModuleId": 90,
       "inputId": 8,
       "color": "#c9b70e"
-    },
-    {
-      "id": 777,
-      "outputModuleId": 101,
-      "outputId": 1,
-      "inputModuleId": 84,
-      "inputId": 0,
-      "color": "#0986ad"
-    },
-    {
-      "id": 781,
-      "outputModuleId": 94,
-      "outputId": 1,
-      "inputModuleId": 84,
-      "inputId": 2,
-      "color": "#0986ad"
-    },
-    {
-      "id": 780,
-      "outputModuleId": 101,
-      "outputId": 0,
-      "inputModuleId": 94,
-      "inputId": 1,
-      "color": "#c91847"
-    },
-    {
-      "id": 770,
-      "outputModuleId": 89,
-      "outputId": 1,
-      "inputModuleId": 101,
-      "inputId": 1,
-      "color": "#0c8e15"
     },
     {
       "id": 782,
@@ -1260,14 +1018,6 @@
       "color": "#c91847"
     },
     {
-      "id": 879,
-      "outputModuleId": 100,
-      "outputId": 0,
-      "inputModuleId": 121,
-      "inputId": 1,
-      "color": "#0986ad"
-    },
-    {
       "id": 880,
       "outputModuleId": 121,
       "outputId": 0,
@@ -1314,6 +1064,86 @@
       "inputModuleId": 100,
       "inputId": 9,
       "color": "#c9b70e"
+    },
+    {
+      "id": 879,
+      "outputModuleId": 100,
+      "outputId": 0,
+      "inputModuleId": 121,
+      "inputId": 1,
+      "color": "#0986ad"
+    },
+    {
+      "id": 911,
+      "outputModuleId": 129,
+      "outputId": 0,
+      "inputModuleId": 1,
+      "inputId": 4,
+      "color": "#0986ad"
+    },
+    {
+      "id": 912,
+      "outputModuleId": 129,
+      "outputId": 1,
+      "inputModuleId": 1,
+      "inputId": 5,
+      "color": "#c9b70e"
+    },
+    {
+      "id": 780,
+      "outputModuleId": 101,
+      "outputId": 0,
+      "inputModuleId": 94,
+      "inputId": 1,
+      "color": "#c91847"
+    },
+    {
+      "id": 781,
+      "outputModuleId": 94,
+      "outputId": 1,
+      "inputModuleId": 84,
+      "inputId": 2,
+      "color": "#0986ad"
+    },
+    {
+      "id": 917,
+      "outputModuleId": 89,
+      "outputId": 1,
+      "inputModuleId": 101,
+      "inputId": 0,
+      "color": "#c91847"
+    },
+    {
+      "id": 777,
+      "outputModuleId": 101,
+      "outputId": 1,
+      "inputModuleId": 84,
+      "inputId": 0,
+      "color": "#0986ad"
+    },
+    {
+      "id": 924,
+      "outputModuleId": 89,
+      "outputId": 1,
+      "inputModuleId": 101,
+      "inputId": 1,
+      "color": "#0986ad"
+    },
+    {
+      "id": 925,
+      "outputModuleId": 102,
+      "outputId": 0,
+      "inputModuleId": 129,
+      "inputId": 0,
+      "color": "#0c8e15"
+    },
+    {
+      "id": 926,
+      "outputModuleId": 102,
+      "outputId": 1,
+      "inputModuleId": 129,
+      "inputId": 1,
+      "color": "#c91847"
     }
   ]
 }
