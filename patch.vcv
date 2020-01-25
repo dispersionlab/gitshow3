@@ -47,7 +47,7 @@
         "external": 0
       },
       "pos": [
-        84,
+        66,
         0
       ]
     },
@@ -59,7 +59,7 @@
       "params": [
         {
           "id": 0,
-          "value": 1.50699985
+          "value": 0.971000254
         },
         {
           "id": 1,
@@ -76,7 +76,7 @@
         "bitRate": 320000
       },
       "pos": [
-        107,
+        89,
         0
       ]
     },
@@ -99,7 +99,7 @@
         }
       },
       "pos": [
-        97,
+        79,
         0
       ]
     },
@@ -118,9 +118,10 @@
           "value": 3.46000171
         }
       ],
-      "leftModuleId": 101,
+      "leftModuleId": 135,
+      "rightModuleId": 136,
       "pos": [
-        54,
+        76,
         2
       ]
     },
@@ -130,6 +131,7 @@
       "version": "1.1.6",
       "model": "MIDIToCVInterface",
       "params": [],
+      "rightModuleId": 134,
       "data": {
         "channels": 1,
         "polyMode": 0,
@@ -144,7 +146,7 @@
       },
       "pos": [
         0,
-        1
+        2
       ]
     },
     {
@@ -302,8 +304,8 @@
           "value": 0.0
         }
       ],
-      "leftModuleId": 93,
-      "rightModuleId": 91,
+      "leftModuleId": 108,
+      "rightModuleId": 133,
       "data": {
         "running": true,
         "gates": [
@@ -311,24 +313,24 @@
           0,
           0,
           0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
           1,
           0,
           0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          1,
           0
         ],
         "gateMode": 0
       },
       "pos": [
         28,
-        0
+        2
       ]
     },
     {
@@ -366,14 +368,15 @@
           "value": 0.0
         }
       ],
-      "leftModuleId": 90,
+      "leftModuleId": 132,
+      "rightModuleId": 102,
       "data": {
         "lastPath": "C:\\dispersion-lab\\gitshow3\\samples\\Babe Ruth - The Mexican_01.wav",
         "oscstate": 0
       },
       "pos": [
-        50,
-        0
+        32,
+        1
       ]
     },
     {
@@ -406,7 +409,7 @@
       },
       "pos": [
         16,
-        0
+        1
       ]
     },
     {
@@ -433,7 +436,7 @@
         }
       ],
       "leftModuleId": 92,
-      "rightModuleId": 90,
+      "rightModuleId": 132,
       "data": {
         "modes": [
           false,
@@ -442,7 +445,7 @@
       },
       "pos": [
         22,
-        0
+        1
       ]
     },
     {
@@ -569,8 +572,9 @@
         }
       ],
       "leftModuleId": 121,
+      "rightModuleId": 117,
       "pos": [
-        44,
+        62,
         1
       ]
     },
@@ -584,7 +588,7 @@
       "text": "METRO \n58\n\nPLAYER \nThe Mexican: start at 5.67\nYellow Sunshine: start at 1.29 \n\nLFO-1\n\nFREQ    0.35527S\nplay with  UNI/BIs \n",
       "pos": [
         0,
-        0
+        1
       ]
     },
     {
@@ -614,9 +618,10 @@
           "value": 1.0
         }
       ],
+      "leftModuleId": 137,
       "rightModuleId": 47,
       "pos": [
-        76,
+        58,
         0
       ]
     },
@@ -655,9 +660,10 @@
           "value": 1.0
         }
       ],
-      "rightModuleId": 84,
+      "leftModuleId": 133,
+      "rightModuleId": 135,
       "pos": [
-        44,
+        62,
         2
       ]
     },
@@ -696,12 +702,14 @@
           "value": 0.0
         }
       ],
+      "leftModuleId": 91,
+      "rightModuleId": 129,
       "data": {
         "lastPath": "C:\\dispersion-lab\\gitshow3\\samples\\Yellow Sunshine - Yellow Sunshine (Audio)_01.wav",
         "oscstate": 0
       },
       "pos": [
-        67,
+        41,
         1
       ]
     },
@@ -728,13 +736,14 @@
           "value": 0.0
         }
       ],
+      "leftModuleId": 134,
       "rightModuleId": 108,
       "data": {
         "onstate": 1
       },
       "pos": [
         16,
-        1
+        2
       ]
     },
     {
@@ -761,6 +770,7 @@
         }
       ],
       "leftModuleId": 107,
+      "rightModuleId": 90,
       "data": {
         "modes": [
           false,
@@ -769,7 +779,7 @@
       },
       "pos": [
         22,
-        1
+        2
       ]
     },
     {
@@ -780,7 +790,7 @@
       "params": [
         {
           "id": 0,
-          "value": 0.996000171
+          "value": 1.0170002
         },
         {
           "id": 1,
@@ -799,8 +809,9 @@
           "value": 1.0
         }
       ],
+      "leftModuleId": 94,
       "pos": [
-        102,
+        84,
         1
       ]
     },
@@ -818,7 +829,7 @@
       "leftModuleId": 129,
       "rightModuleId": 94,
       "pos": [
-        38,
+        56,
         1
       ]
     },
@@ -833,10 +844,93 @@
           "value": 1.0
         }
       ],
+      "leftModuleId": 102,
       "rightModuleId": 121,
       "pos": [
-        32,
+        50,
         1
+      ]
+    },
+    {
+      "id": 132,
+      "plugin": "Core",
+      "version": "1.1.6",
+      "model": "Blank",
+      "params": [],
+      "leftModuleId": 93,
+      "rightModuleId": 91,
+      "width": 60.0,
+      "pos": [
+        28,
+        1
+      ]
+    },
+    {
+      "id": 133,
+      "plugin": "Core",
+      "version": "1.1.6",
+      "model": "Blank",
+      "params": [],
+      "leftModuleId": 90,
+      "rightModuleId": 101,
+      "width": 180.0,
+      "pos": [
+        50,
+        2
+      ]
+    },
+    {
+      "id": 134,
+      "plugin": "Core",
+      "version": "1.1.6",
+      "model": "Blank",
+      "params": [],
+      "leftModuleId": 89,
+      "rightModuleId": 107,
+      "width": 120.0,
+      "pos": [
+        8,
+        2
+      ]
+    },
+    {
+      "id": 135,
+      "plugin": "Core",
+      "version": "1.1.6",
+      "model": "Blank",
+      "params": [],
+      "leftModuleId": 101,
+      "rightModuleId": 84,
+      "width": 60.0,
+      "pos": [
+        72,
+        2
+      ]
+    },
+    {
+      "id": 136,
+      "plugin": "Core",
+      "version": "1.1.6",
+      "model": "Blank",
+      "params": [],
+      "leftModuleId": 84,
+      "width": 150.0,
+      "pos": [
+        84,
+        2
+      ]
+    },
+    {
+      "id": 137,
+      "plugin": "Core",
+      "version": "1.1.6",
+      "model": "Blank",
+      "params": [],
+      "rightModuleId": 100,
+      "width": 870.0,
+      "pos": [
+        0,
+        0
       ]
     }
   ],
