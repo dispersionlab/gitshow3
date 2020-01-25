@@ -47,7 +47,7 @@
         "external": 0
       },
       "pos": [
-        87,
+        84,
         0
       ]
     },
@@ -76,7 +76,7 @@
         "bitRate": 320000
       },
       "pos": [
-        110,
+        107,
         0
       ]
     },
@@ -99,7 +99,7 @@
         }
       },
       "pos": [
-        100,
+        97,
         0
       ]
     },
@@ -118,10 +118,10 @@
           "value": 3.46000171
         }
       ],
-      "rightModuleId": 100,
+      "leftModuleId": 101,
       "pos": [
-        71,
-        0
+        54,
+        2
       ]
     },
     {
@@ -130,7 +130,6 @@
       "version": "1.1.6",
       "model": "MIDIToCVInterface",
       "params": [],
-      "leftModuleId": 119,
       "data": {
         "channels": 1,
         "polyMode": 0,
@@ -144,7 +143,7 @@
         }
       },
       "pos": [
-        8,
+        0,
         1
       ]
     },
@@ -310,6 +309,8 @@
         "gates": [
           1,
           0,
+          0,
+          0,
           1,
           0,
           0,
@@ -320,15 +321,13 @@
           0,
           0,
           0,
-          0,
-          0,
-          0,
+          1,
           0
         ],
         "gateMode": 0
       },
       "pos": [
-        31,
+        28,
         0
       ]
     },
@@ -373,7 +372,7 @@
         "oscstate": 0
       },
       "pos": [
-        53,
+        50,
         0
       ]
     },
@@ -406,7 +405,7 @@
         "onstate": 1
       },
       "pos": [
-        19,
+        16,
         0
       ]
     },
@@ -442,7 +441,7 @@
         ]
       },
       "pos": [
-        25,
+        22,
         0
       ]
     },
@@ -571,7 +570,7 @@
       ],
       "leftModuleId": 121,
       "pos": [
-        47,
+        44,
         1
       ]
     },
@@ -582,9 +581,9 @@
       "model": "Notes",
       "params": [],
       "rightModuleId": 92,
-      "text": "METRO \n58\n\nPLAYER \nstart at 5.67\n\nLFO-1\n\nFREQ    0.35527S\nplay with  UNI/BIs \n",
+      "text": "METRO \n58\n\nPLAYER \nThe Mexican: start at 5.67\nYellow Sunshine: start at 1.29 \n\nLFO-1\n\nFREQ    0.35527S\nplay with  UNI/BIs \n",
       "pos": [
-        3,
+        0,
         0
       ]
     },
@@ -615,10 +614,9 @@
           "value": 1.0
         }
       ],
-      "leftModuleId": 84,
       "rightModuleId": 47,
       "pos": [
-        79,
+        76,
         0
       ]
     },
@@ -657,11 +655,10 @@
           "value": 1.0
         }
       ],
-      "leftModuleId": 108,
-      "rightModuleId": 121,
+      "rightModuleId": 84,
       "pos": [
-        31,
-        1
+        44,
+        2
       ]
     },
     {
@@ -704,7 +701,7 @@
         "oscstate": 0
       },
       "pos": [
-        70,
+        67,
         1
       ]
     },
@@ -736,7 +733,7 @@
         "onstate": 1
       },
       "pos": [
-        19,
+        16,
         1
       ]
     },
@@ -764,7 +761,6 @@
         }
       ],
       "leftModuleId": 107,
-      "rightModuleId": 101,
       "data": {
         "modes": [
           false,
@@ -772,7 +768,7 @@
         ]
       },
       "pos": [
-        25,
+        22,
         1
       ]
     },
@@ -784,7 +780,7 @@
       "params": [
         {
           "id": 0,
-          "value": 0.993000031
+          "value": 0.996000171
         },
         {
           "id": 1,
@@ -804,36 +800,7 @@
         }
       ],
       "pos": [
-        105,
-        1
-      ]
-    },
-    {
-      "id": 119,
-      "plugin": "Befaco",
-      "version": "1.0.0",
-      "model": "SpringReverb",
-      "params": [
-        {
-          "id": 0,
-          "value": 0.5
-        },
-        {
-          "id": 1,
-          "value": 0.0
-        },
-        {
-          "id": 2,
-          "value": 0.0
-        },
-        {
-          "id": 3,
-          "value": 0.5
-        }
-      ],
-      "rightModuleId": 89,
-      "pos": [
-        0,
+        102,
         1
       ]
     },
@@ -848,10 +815,10 @@
           "value": 0.0
         }
       ],
-      "leftModuleId": 101,
+      "leftModuleId": 129,
       "rightModuleId": 94,
       "pos": [
-        41,
+        38,
         1
       ]
     },
@@ -863,11 +830,12 @@
       "params": [
         {
           "id": 0,
-          "value": 0.0
+          "value": 1.0
         }
       ],
+      "rightModuleId": 121,
       "pos": [
-        87,
+        32,
         1
       ]
     }
@@ -1090,22 +1058,6 @@
       "color": "#c9b70e"
     },
     {
-      "id": 780,
-      "outputModuleId": 101,
-      "outputId": 0,
-      "inputModuleId": 94,
-      "inputId": 1,
-      "color": "#c91847"
-    },
-    {
-      "id": 781,
-      "outputModuleId": 94,
-      "outputId": 1,
-      "inputModuleId": 84,
-      "inputId": 2,
-      "color": "#0986ad"
-    },
-    {
       "id": 917,
       "outputModuleId": 89,
       "outputId": 1,
@@ -1142,6 +1094,22 @@
       "outputModuleId": 102,
       "outputId": 1,
       "inputModuleId": 129,
+      "inputId": 1,
+      "color": "#c91847"
+    },
+    {
+      "id": 781,
+      "outputModuleId": 94,
+      "outputId": 1,
+      "inputModuleId": 84,
+      "inputId": 2,
+      "color": "#0986ad"
+    },
+    {
+      "id": 780,
+      "outputModuleId": 101,
+      "outputId": 0,
+      "inputModuleId": 94,
       "inputId": 1,
       "color": "#c91847"
     }
