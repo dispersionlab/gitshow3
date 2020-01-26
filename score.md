@@ -1,9 +1,21 @@
 ## Score
 
+Listen to the beat.
+
+Let go and
+
 Find your flow.
 
-Add to your flow.
+Shift and change with the currents;
 
-Shift and change with the currents.
+disturb the flow.
 
-Find your way home.
+Find comfort,
+
+find your way home.
+
+
+
+ 
+
+
