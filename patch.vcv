@@ -69,7 +69,7 @@
       "leftModuleId": 1,
       "data": {
         "format": "wav",
-        "path": "/Users/magfoto/Library/Mobile Documents/com~apple~CloudDocs/York U - PhD Study/_courses/DIGM 6020 - Vertical Studio Lab II/gitshow3/recording.wav",
+        "path": "C:\\dispersion-lab\\gitshow3/recording.wav",
         "incrementPath": false,
         "sampleRate": 44100,
         "depth": 16,
@@ -312,19 +312,19 @@
         "gates": [
           1,
           0,
-          1,
-          0,
-          1,
-          0,
-          0,
-          0,
-          0,
-          0,
           0,
           0,
           1,
           0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
           1,
+          0,
+          0,
           0
         ],
         "gateMode": 0
@@ -508,7 +508,7 @@
         },
         {
           "id": 13,
-          "value": -53.5139999
+          "value": -54.0
         },
         {
           "id": 14,
@@ -840,7 +840,7 @@
       "params": [
         {
           "id": 0,
-          "value": 0.0
+          "value": 1.0
         }
       ],
       "leftModuleId": 142,
@@ -944,8 +944,8 @@
         "states": [
           true,
           true,
-          false,
-          false,
+          true,
+          true,
           false,
           false,
           false,
