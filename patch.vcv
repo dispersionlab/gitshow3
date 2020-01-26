@@ -311,7 +311,7 @@
         "gates": [
           1,
           0,
-          1,
+          0,
           0,
           1,
           0,
@@ -584,7 +584,7 @@
       "model": "Notes",
       "params": [],
       "rightModuleId": 137,
-      "text": "METRO \n58\n\nPLAYER \nThe Mexican: start at 5.67\nYellow Sunshine: start at 1.29 \n\nLFO-1\n\nFREQ    0.35527S\nplay with  UNI/BIs \n",
+      "text": "Get samples from:\nhttps://drive.google.com/drive/folders/1YALRSXczF1kN60_pYv3WVcbqCKxFDpYR?usp=sharing\n\nMETRO \n58\n\nPLAYER \nThe Mexican: start at 5.67\nYellow Sunshine: start at 1.29 \n- play around with the playback position\n\nLFO-1\nFREQ: 0.35527S\n- play with  UNI/BIs\n\n\ndBiz TROSC + MIDI-CV\nplay around with Osc2 Frequency and QWERTY keyboard\n\n  \n",
       "pos": [
         0,
         0
