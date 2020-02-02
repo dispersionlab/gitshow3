@@ -90,7 +90,7 @@
       "rightModuleId": 78,
       "data": {
         "audio": {
-          "driver": 6,
+          "driver": 5,
           "offset": 0,
           "maxChannels": 8,
           "sampleRate": 48000,
@@ -323,7 +323,7 @@
           0,
           0,
           0,
-          1,
+          0,
           0
         ],
         "gateMode": 0
@@ -371,7 +371,7 @@
       "leftModuleId": 93,
       "rightModuleId": 102,
       "data": {
-        "lastPath": "C:\\dispersion-lab\\gitshow3\\samples\\Babe Ruth - The Mexican_01.wav",
+        "lastPath": "/Users/lorenasalome/Documents/DigMediaYorkU/VSL/gitshow3/extensions/Babe Ruth - The Mexican_01.wav",
         "oscstate": 0
       },
       "pos": [
@@ -704,7 +704,7 @@
       "leftModuleId": 91,
       "rightModuleId": 142,
       "data": {
-        "lastPath": "C:\\dispersion-lab\\gitshow3\\samples\\Yellow Sunshine - Yellow Sunshine (Audio)_01.wav",
+        "lastPath": "/Users/lorenasalome/Documents/DigMediaYorkU/VSL/gitshow3/extensions/Yellow Sunshine - Yellow Sunshine (Audio)_01.wav",
         "oscstate": 0
       },
       "pos": [
