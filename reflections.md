@@ -1,22 +1,40 @@
-> ## Score
-> 
+> ## **Score**
+
+> Listen to the beat.
+
+> Let go and
+
 > Find your flow.
-> 
-> Add to your flow.
-> 
-> Shift and change with the currents.
-> 
-> Find your way home.
+
+> Shift and change with the currents;
+
+> disturb the flow.
+
+> Find comfort,
+
+> find your way home.
+
+> ## 
+> ---
 
 
-I love how poetic this score was written, however because of this, I expected to hear ocean wave sounds from the recording. This expectation might have also come from the fact that many VSL students used samples last week, or at least it was talked about a lot from what I can remember.
+> **++Notes++**
 
-**Recording:**
-I enjoyed the playfulness of the recording. I liked how the noise would travel from one channel to another; it feels like I'm constantly following the sound with my eyes without actually moving them(?). This is definitely something I would think about for my own rendition of this score.
+> **Get samples from:** https://drive.google.com/drive/folders/1YALRSXczF1kN60_pYv3WVcbqCKxFDpYR?usp=sharing
 
-The motif at round 15s is repeated with small changes throughout the piece; the pitch gradually increases, and the rate at which the noise changes channels from left to right also increases. The piece ends abruptly after a sustained low note.
+> **METRO **
+58
 
-The recording fades in with clicks/pops over 8s.
+> **PLAYER **
+The Mexican: start at 5.67
+Yellow Sunshine: start at 1.29 
+-- play around with the playback position
 
-**Performing the Score:**
-I managed to find the motif fairly easily. I think the patch is pretty simple except the fact that it's using the Turing Machine module. The machine is a mystery to me.
+> **LFO-1**
+FREQ: 0.35527S
+-- play with  UNI/BIs
+
+> **dBiz TROSC + MIDI-CV**
+play around with Osc2 Frequency and QWERTY keyboard
+
+
