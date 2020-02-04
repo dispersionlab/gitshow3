@@ -9,7 +9,7 @@
       "params": [
         {
           "id": 0,
-          "value": -2.0
+          "value": 0.0
         },
         {
           "id": 1,
@@ -41,7 +41,6 @@
         }
       ],
       "leftModuleId": 100,
-      "rightModuleId": 143,
       "data": {
         "lissajous": 0,
         "external": 0
@@ -52,45 +51,16 @@
       ]
     },
     {
-      "id": 78,
-      "plugin": "VCV-Recorder",
-      "version": "1.0.1",
-      "model": "Recorder",
-      "params": [
-        {
-          "id": 0,
-          "value": 0.0
-        },
-        {
-          "id": 1,
-          "value": 0.0
-        }
-      ],
-      "leftModuleId": 1,
-      "data": {
-        "format": "wav",
-        "path": "C:\\dispersion-lab\\gitshow3/recording.wav",
-        "incrementPath": false,
-        "sampleRate": 44100,
-        "depth": 16,
-        "bitRate": 320000
-      },
-      "pos": [
-        77,
-        0
-      ]
-    },
-    {
       "id": 1,
       "plugin": "Core",
       "version": "1.1.6",
       "model": "AudioInterface",
       "params": [],
-      "leftModuleId": 143,
-      "rightModuleId": 78,
+      "rightModuleId": 146,
       "data": {
         "audio": {
           "driver": 5,
+          "deviceName": "4c: ",
           "offset": 0,
           "maxChannels": 8,
           "sampleRate": 48000,
@@ -311,9 +281,9 @@
         "gates": [
           1,
           0,
-          0,
-          0,
           1,
+          0,
+          0,
           0,
           0,
           0,
@@ -371,7 +341,7 @@
       "leftModuleId": 93,
       "rightModuleId": 102,
       "data": {
-        "lastPath": "/Users/lorenasalome/Documents/DigMediaYorkU/VSL/gitshow3/extensions/Babe Ruth - The Mexican_01.wav",
+        "lastPath": "/Users/lorenasalome/Documents/DigMediaYorkU/VSL/extensions/Babe Ruth - The Mexican_01.wav",
         "oscstate": 0
       },
       "pos": [
@@ -499,7 +469,7 @@
         },
         {
           "id": 11,
-          "value": -54.0
+          "value": -50.5979958
         },
         {
           "id": 12,
@@ -507,7 +477,7 @@
         },
         {
           "id": 13,
-          "value": -54.0
+          "value": -41.3639984
         },
         {
           "id": 14,
@@ -515,7 +485,7 @@
         },
         {
           "id": 15,
-          "value": -54.0
+          "value": -47.3579941
         },
         {
           "id": 16,
@@ -614,7 +584,7 @@
         },
         {
           "id": 4,
-          "value": 0.93750006
+          "value": 0.586499929
         }
       ],
       "leftModuleId": 137,
@@ -640,7 +610,7 @@
         },
         {
           "id": 2,
-          "value": -1.49300039
+          "value": -0.151999682
         },
         {
           "id": 3,
@@ -704,7 +674,7 @@
       "leftModuleId": 91,
       "rightModuleId": 142,
       "data": {
-        "lastPath": "/Users/lorenasalome/Documents/DigMediaYorkU/VSL/gitshow3/extensions/Yellow Sunshine - Yellow Sunshine (Audio)_01.wav",
+        "lastPath": "/Users/lorenasalome/Documents/DigMediaYorkU/VSL/extensions/Yellow Sunshine - Yellow Sunshine (Audio)_01.wav",
         "oscstate": 0
       },
       "pos": [
@@ -839,7 +809,7 @@
       "params": [
         {
           "id": 0,
-          "value": 1.0
+          "value": 0.0
         }
       ],
       "leftModuleId": 142,
@@ -962,17 +932,54 @@
       ]
     },
     {
-      "id": 143,
-      "plugin": "Core",
-      "version": "1.1.6",
-      "model": "Blank",
-      "params": [],
-      "bypass": true,
-      "leftModuleId": 47,
-      "rightModuleId": 1,
-      "width": 240.0,
+      "id": 144,
+      "plugin": "Fundamental",
+      "version": "1.4.0",
+      "model": "Unity",
+      "params": [
+        {
+          "id": 0,
+          "value": 0.0
+        },
+        {
+          "id": 1,
+          "value": 0.0
+        }
+      ],
+      "data": {
+        "merge": false
+      },
       "pos": [
-        51,
+        57,
+        0
+      ]
+    },
+    {
+      "id": 146,
+      "plugin": "VCV-Recorder",
+      "version": "1.0.1",
+      "model": "Recorder",
+      "params": [
+        {
+          "id": 0,
+          "value": 1.0
+        },
+        {
+          "id": 1,
+          "value": 0.0
+        }
+      ],
+      "leftModuleId": 1,
+      "data": {
+        "format": "wav",
+        "path": "/Users/lorenasalome/Documents/DigMediaYorkU/VSL/gitshow3/recording.wav",
+        "incrementPath": false,
+        "sampleRate": 44100,
+        "depth": 16,
+        "bitRate": 320000
+      },
+      "pos": [
+        77,
         0
       ]
     }
@@ -1105,14 +1112,6 @@
       "inputModuleId": 100,
       "inputId": 9,
       "color": "#c9b70e"
-    },
-    {
-      "id": 917,
-      "outputModuleId": 89,
-      "outputId": 1,
-      "inputModuleId": 101,
-      "inputId": 0,
-      "color": "#c91847"
     },
     {
       "id": 777,
@@ -1251,44 +1250,76 @@
       "color": "#c91847"
     },
     {
-      "id": 964,
-      "outputModuleId": 117,
+      "id": 917,
+      "outputModuleId": 89,
       "outputId": 1,
-      "inputModuleId": 1,
+      "inputModuleId": 101,
       "inputId": 0,
-      "color": "#0986ad"
-    },
-    {
-      "id": 965,
-      "outputModuleId": 117,
-      "outputId": 2,
-      "inputModuleId": 1,
-      "inputId": 1,
-      "color": "#c9b70e"
+      "color": "#c91847"
     },
     {
       "id": 966,
       "outputModuleId": 117,
       "outputId": 3,
-      "inputModuleId": 1,
-      "inputId": 2,
+      "inputModuleId": 144,
+      "inputId": 0,
       "color": "#0c8e15"
     },
     {
       "id": 967,
       "outputModuleId": 117,
       "outputId": 4,
-      "inputModuleId": 1,
-      "inputId": 3,
+      "inputModuleId": 144,
+      "inputId": 1,
       "color": "#c91847"
     },
     {
-      "id": 974,
+      "id": 964,
       "outputModuleId": 117,
-      "outputId": 0,
-      "inputModuleId": 78,
+      "outputId": 1,
+      "inputModuleId": 144,
       "inputId": 2,
-      "color": "#c91847"
+      "color": "#0986ad"
+    },
+    {
+      "id": 965,
+      "outputModuleId": 117,
+      "outputId": 2,
+      "inputModuleId": 144,
+      "inputId": 3,
+      "color": "#c9b70e"
+    },
+    {
+      "id": 975,
+      "outputModuleId": 144,
+      "outputId": 0,
+      "inputModuleId": 1,
+      "inputId": 0,
+      "color": "#0c8e15"
+    },
+    {
+      "id": 977,
+      "outputModuleId": 144,
+      "outputId": 0,
+      "inputModuleId": 1,
+      "inputId": 1,
+      "color": "#0986ad"
+    },
+    {
+      "id": 983,
+      "outputModuleId": 144,
+      "outputId": 0,
+      "inputModuleId": 146,
+      "inputId": 2,
+      "color": "#c9b70e"
+    },
+    {
+      "id": 984,
+      "outputModuleId": 144,
+      "outputId": 0,
+      "inputModuleId": 146,
+      "inputId": 3,
+      "color": "#0c8e15"
     }
   ]
 }

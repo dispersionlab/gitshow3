@@ -12,10 +12,12 @@ There is a rythm going that makes you want to dance. I can hear the beat and the
 
 > disturb the flow.
 
-There is a little bit of disturbing of the flow, with some noises that starts around 00:18 seconds of the recording.  
-But there is is still a rythm and flow going that is not so disturbed. There is an addition layer of noises that play with thte beat and rythm from the sample. 
+There is a little bit of disturbing of the flow, with some noises that starts around 00:18 seconds of the recording. a few blips of high frequencies and then noise or a distorted wave. But there is still a rythm and flow going that is not so disturbed. 
+ 
 
 > Find comfort,
+> 
+I think I will disturb the flow more. 
 
 > find your way home.
 
@@ -46,7 +48,12 @@ play around with Osc2 Frequency and QWERTY keyboard
 ### Preparing patch and files
 
 The samples are too big to push in repository, so couldn't make the folder extensions for these samples. 
-I downloaded files to my local disk and load them to the patch from local path but do not put in repository because it won't push 
+I downloaded files to my local disk and loaded them to the patch from local path but do not put in repository because it won't push 
+
+
+### Following the score
+
+
 
 
 
