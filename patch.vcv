@@ -46,7 +46,7 @@
         "external": 0
       },
       "pos": [
-        41,
+        38,
         0
       ]
     },
@@ -68,7 +68,7 @@
         }
       },
       "pos": [
-        70,
+        67,
         0
       ]
     },
@@ -90,7 +90,7 @@
       "leftModuleId": 135,
       "rightModuleId": 136,
       "pos": [
-        66,
+        63,
         2
       ]
     },
@@ -115,7 +115,7 @@
         }
       },
       "pos": [
-        15,
+        12,
         2
       ]
     },
@@ -281,17 +281,17 @@
         "gates": [
           1,
           0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
           1,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
           0,
           0,
           0
@@ -299,7 +299,7 @@
         "gateMode": 0
       },
       "pos": [
-        23,
+        20,
         2
       ]
     },
@@ -311,7 +311,7 @@
       "params": [
         {
           "id": 0,
-          "value": 5.3950038
+          "value": 7.03000259
         },
         {
           "id": 1,
@@ -319,7 +319,7 @@
         },
         {
           "id": 2,
-          "value": -0.0269999262
+          "value": -0.64199996
         },
         {
           "id": 3,
@@ -345,7 +345,7 @@
         "oscstate": 0
       },
       "pos": [
-        15,
+        12,
         1
       ]
     },
@@ -357,7 +357,7 @@
       "params": [
         {
           "id": 0,
-          "value": 213.10817
+          "value": 222.138245
         },
         {
           "id": 1,
@@ -377,7 +377,7 @@
         "onstate": 1
       },
       "pos": [
-        3,
+        0,
         1
       ]
     },
@@ -413,7 +413,7 @@
         ]
       },
       "pos": [
-        9,
+        6,
         1
       ]
     },
@@ -477,11 +477,11 @@
         },
         {
           "id": 13,
-          "value": -43.1459961
+          "value": -0.864019573
         },
         {
           "id": 14,
-          "value": -0.433999479
+          "value": -0.799999595
         },
         {
           "id": 15,
@@ -525,11 +525,11 @@
         },
         {
           "id": 25,
-          "value": 0.780000091
+          "value": 0.13800025
         },
         {
           "id": 26,
-          "value": 0.861000299
+          "value": 0.165000394
         },
         {
           "id": 27,
@@ -543,7 +543,7 @@
       "leftModuleId": 121,
       "rightModuleId": 117,
       "pos": [
-        53,
+        50,
         1
       ]
     },
@@ -556,7 +556,7 @@
       "rightModuleId": 137,
       "text": "Get samples from:\nhttps://drive.google.com/drive/folders/1YALRSXczF1kN60_pYv3WVcbqCKxFDpYR?usp=sharing\n\nMETRO \n58\n\nPLAYER \nThe Mexican: start at 5.67\nYellow Sunshine: start at 1.29 \n- play around with the playback position\n\nLFO-1\nFREQ: 0.35527S\n- play with  UNI/BIs\n\n\ndBiz TROSC + MIDI-CV\nplay around with Osc2 Frequency and QWERTY keyboard\n\n  \n",
       "pos": [
-        3,
+        0,
         0
       ]
     },
@@ -590,7 +590,7 @@
       "leftModuleId": 137,
       "rightModuleId": 47,
       "pos": [
-        33,
+        30,
         0
       ]
     },
@@ -610,11 +610,11 @@
         },
         {
           "id": 2,
-          "value": -0.826998889
+          "value": 2.0889976
         },
         {
           "id": 3,
-          "value": 0.0699999928
+          "value": 0.0
         },
         {
           "id": 4,
@@ -632,7 +632,7 @@
       "leftModuleId": 90,
       "rightModuleId": 135,
       "pos": [
-        45,
+        42,
         2
       ]
     },
@@ -644,7 +644,7 @@
       "params": [
         {
           "id": 0,
-          "value": 2.83499002
+          "value": 4.15000248
         },
         {
           "id": 1,
@@ -652,7 +652,7 @@
         },
         {
           "id": 2,
-          "value": 0.278999984
+          "value": -0.309000075
         },
         {
           "id": 3,
@@ -678,7 +678,7 @@
         "oscstate": 0
       },
       "pos": [
-        24,
+        21,
         1
       ]
     },
@@ -690,7 +690,7 @@
       "params": [
         {
           "id": 0,
-          "value": 109.714752
+          "value": 104.748299
         },
         {
           "id": 1,
@@ -705,6 +705,7 @@
           "value": 0.0
         }
       ],
+      "rightModuleId": 108,
       "data": {
         "onstate": 1
       },
@@ -721,11 +722,11 @@
       "params": [
         {
           "id": 0,
-          "value": 0.815499842
+          "value": 0.483999372
         },
         {
           "id": 1,
-          "value": 0.158999309
+          "value": 0.479999185
         },
         {
           "id": 2,
@@ -736,6 +737,7 @@
           "value": 0.0
         }
       ],
+      "leftModuleId": 107,
       "rightModuleId": 89,
       "data": {
         "modes": [
@@ -744,7 +746,7 @@
         ]
       },
       "pos": [
-        9,
+        6,
         2
       ]
     },
@@ -756,7 +758,7 @@
       "params": [
         {
           "id": 0,
-          "value": 1.0140003
+          "value": 1.04400051
         },
         {
           "id": 1,
@@ -777,7 +779,7 @@
       ],
       "leftModuleId": 94,
       "pos": [
-        75,
+        72,
         1
       ]
     },
@@ -795,7 +797,7 @@
       "leftModuleId": 129,
       "rightModuleId": 94,
       "pos": [
-        47,
+        44,
         1
       ]
     },
@@ -813,7 +815,7 @@
       "leftModuleId": 142,
       "rightModuleId": 121,
       "pos": [
-        41,
+        38,
         1
       ]
     },
@@ -828,7 +830,7 @@
       "rightModuleId": 84,
       "width": 165.0,
       "pos": [
-        55,
+        52,
         2
       ]
     },
@@ -842,7 +844,7 @@
       "leftModuleId": 84,
       "width": 165.0,
       "pos": [
-        74,
+        71,
         2
       ]
     },
@@ -857,7 +859,7 @@
       "rightModuleId": 100,
       "width": 210.0,
       "pos": [
-        19,
+        16,
         0
       ]
     },
@@ -925,7 +927,7 @@
         ]
       },
       "pos": [
-        33,
+        30,
         1
       ]
     },
@@ -948,7 +950,7 @@
         "merge": false
       },
       "pos": [
-        60,
+        57,
         0
       ]
     },
@@ -977,7 +979,7 @@
         "bitRate": 320000
       },
       "pos": [
-        80,
+        77,
         0
       ]
     }

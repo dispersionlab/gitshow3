@@ -53,6 +53,15 @@ I downloaded files to my local disk and loaded them to the patch from local path
 
 ### Following the score
 
+While trying to folow the score, I liked a loop created with one of the samples, that loops **pretty colours** over and over, and sometimes a **baby**
+ ![Pretty colours](/Users/lorenasalome/Documents/DigMediaYorkU/VSL/gitshow3/extensions/prettyColours.png)
+ 
+ 
+### Experimenting with Score
+
+
+ 
+
 
 
 
