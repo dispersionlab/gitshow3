@@ -59,6 +59,33 @@ While trying to folow the score, I liked a loop created with one of the samples,
  
 ### Experimenting with Score
 
+I didn't change the module at all. I like the potential of it and how to be able to modiy the sounds 
+
+### New score
+
+1. Before opening Rack, you need to get dBiz plugin from VCV Rack
+
+2. repeat steps from previous score:
+
+> **Get samples from:** https://drive.google.com/drive/folders/1YALRSXczF1kN60_pYv3WVcbqCKxFDpYR?usp=sharing   
+
+> **METRO **
+58
+
+> **PLAYER **
+The Mexican: start at 5.67
+Yellow Sunshine: start at 1.29 
+-- play around with the playback position
+
+> **LFO-1**
+FREQ: 0.35527S
+-- play with  UNI/BIs
+
+Once it started change the metro values form both samples and the gate values from Yellow Sunshine sample. 
+Modify the frequency from LFO-1 and the coarse and fine knobs from the Oscilator that is connected to LFO-1
+
+Play with noise or create a melody. Have fun 
+
 
  
 

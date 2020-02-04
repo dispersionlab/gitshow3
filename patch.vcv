@@ -281,7 +281,7 @@
         "gates": [
           1,
           0,
-          0,
+          1,
           0,
           0,
           0,
@@ -311,7 +311,7 @@
       "params": [
         {
           "id": 0,
-          "value": 7.03000259
+          "value": 7.66000223
         },
         {
           "id": 1,
@@ -341,7 +341,7 @@
       "leftModuleId": 93,
       "rightModuleId": 102,
       "data": {
-        "lastPath": "/Users/lorenasalome/Documents/DigMediaYorkU/VSL/extensions/Babe Ruth - The Mexican_01.wav",
+        "lastPath": "/Users/lorenasalome/Documents/DigMediaYorkU/VSL/gitshow3/extensions/Babe Ruth - The Mexican_01.wav",
         "oscstate": 0
       },
       "pos": [
@@ -357,7 +357,7 @@
       "params": [
         {
           "id": 0,
-          "value": 222.138245
+          "value": 235.231735
         },
         {
           "id": 1,
@@ -477,11 +477,11 @@
         },
         {
           "id": 13,
-          "value": -0.864019573
+          "value": 40.1220016
         },
         {
           "id": 14,
-          "value": -0.799999595
+          "value": 1.0
         },
         {
           "id": 15,
@@ -610,7 +610,7 @@
         },
         {
           "id": 2,
-          "value": 2.0889976
+          "value": 4.7349968
         },
         {
           "id": 3,
@@ -644,7 +644,7 @@
       "params": [
         {
           "id": 0,
-          "value": 4.15000248
+          "value": 2.68500304
         },
         {
           "id": 1,
@@ -674,7 +674,7 @@
       "leftModuleId": 91,
       "rightModuleId": 142,
       "data": {
-        "lastPath": "/Users/lorenasalome/Documents/DigMediaYorkU/VSL/extensions/Yellow Sunshine - Yellow Sunshine (Audio)_01.wav",
+        "lastPath": "/Users/lorenasalome/Documents/DigMediaYorkU/VSL/gitshow3/extensions/Yellow Sunshine - Yellow Sunshine (Audio)_01.wav",
         "oscstate": 0
       },
       "pos": [
@@ -690,7 +690,7 @@
       "params": [
         {
           "id": 0,
-          "value": 104.748299
+          "value": 106.102776
         },
         {
           "id": 1,
@@ -722,11 +722,11 @@
       "params": [
         {
           "id": 0,
-          "value": 0.483999372
+          "value": 0.758499444
         },
         {
           "id": 1,
-          "value": 0.479999185
+          "value": 0.232499167
         },
         {
           "id": 2,
